@@ -184,10 +184,10 @@ const CourseDetail = () => {
                   </span>
                 </div>
                 <div>
-                  <h3 className={`text-sm font-black leading-snug ${isActive ? 'text-white' : 'text-slate-100 group-hover:text-indigo-300'}`}>
+                  <h3 className={`text-base sm:text-lg font-semibold leading-snug tracking-normal ${isActive ? 'text-white' : 'text-slate-100 group-hover:text-indigo-300'}`}>
                     {tab.name}
                   </h3>
-                  <p className="text-xs text-slate-400 mt-1 line-clamp-2 leading-relaxed">{tab.desc}</p>
+                  <p className="text-xs text-slate-400 mt-1 line-clamp-2 leading-relaxed font-normal">{tab.desc}</p>
                 </div>
               </button>
             )
