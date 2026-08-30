@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { FiMail, FiSave, FiUpload } from 'react-icons/fi'
+import { FiMail, FiSave, FiUpload, FiUser } from 'react-icons/fi'
 import { apiClient } from '../../api/apiClient'
 import { ENDPOINTS } from '../../api/endpoints'
 import { setUser } from '../../redux/slices/authSlice'
@@ -19,7 +19,7 @@ const ProfilePage = () => {
   const [isError, setIsError] = useState(false)
   const fileInputRef = useRef(null)
 
-  const avatarSrc = form.avatar_url || `https://ui-avatars.com/api/?name=${user?.username || 'U'}`
+  const avatarSrc = form.avatar_url || `https://ui-avatars.com/api/?name=${user?.username || 'U'}&background=6366f1&color=fff`
 
   const handleAvatarUpload = async (event) => {
     const image = event.target.files?.[0]
@@ -42,7 +42,6 @@ const ProfilePage = () => {
     try {
       const imageData = new FormData()
       imageData.append('image', image)
-      console.log('Uploading image to:', ENDPOINTS.uploadAvatar)
       const { data } = await apiClient.post(ENDPOINTS.uploadAvatar, imageData, {
         headers: { 'Content-Type': 'multipart/form-data' },
       })
@@ -54,11 +53,6 @@ const ProfilePage = () => {
       setIsError(true)
       const errorDetail = err.response?.data?.detail || 'Failed to upload profile image.'
       const errorMessage = typeof errorDetail === 'string' ? errorDetail : JSON.stringify(errorDetail)
-      console.error('Upload error:', {
-        status: err.response?.status,
-        data: err.response?.data,
-        message: errorMessage,
-      })
       setMessage(`Upload Error: ${errorMessage}`)
     } finally {
       setUploadingAvatar(false)
@@ -84,35 +78,56 @@ const ProfilePage = () => {
   }
 
   return (
-    <div className="max-w-2xl mx-auto">
-      <h1 className="text-2xl font-bold mb-8">My Profile</h1>
+    <div className="max-w-3xl mx-auto space-y-6 font-sans pb-16">
+      {/* Header */}
+      <div className="flex items-center gap-3">
+        <div className="w-12 h-12 rounded-2xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-500 flex items-center justify-center text-2xl shrink-0">
+          <FiUser />
+        </div>
+        <div>
+          <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
+            My Profile
+          </h1>
+          <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-normal mt-1">
+            Manage your personal details, public bio, and avatar
+          </p>
+        </div>
+      </div>
 
-      <div className="card mb-6 flex items-center gap-6">
+      {/* User Card */}
+      <div className="card flex items-center gap-6 p-6">
         <img
           src={avatarSrc}
           alt="Profile"
-          className="w-20 h-20 rounded-full"
+          className="w-20 h-20 rounded-2xl object-cover ring-2 ring-indigo-500/30 shrink-0"
         />
-        <div>
-          <h2 className="text-xl font-bold">{user?.full_name || user?.username}</h2>
-          <p className="text-gray-500">@{user?.username}</p>
-          <p className="text-sm text-gray-400 flex items-center gap-1 mt-1">
+        <div className="min-w-0">
+          <h2 className="text-lg sm:text-xl font-bold tracking-tight text-slate-900 dark:text-white">
+            {user?.full_name || user?.username}
+          </h2>
+          <p className="text-xs font-mono text-indigo-600 dark:text-indigo-400 font-semibold mt-0.5">
+            @{user?.username}
+          </p>
+          <p className="text-xs text-slate-500 dark:text-slate-400 flex items-center gap-1.5 mt-1.5 font-mono">
             <FiMail /> {user?.email}
           </p>
         </div>
       </div>
 
       {message && (
-        <div className={`mb-4 rounded-lg p-3 text-sm ${isError ? 'bg-red-100 text-red-700 dark:bg-red-950 dark:text-red-200' : 'bg-green-100 text-green-700 dark:bg-green-950 dark:text-green-200'}`}>
+        <div className={`rounded-xl p-3.5 text-xs font-semibold ${isError ? 'bg-rose-50 text-rose-700 border border-rose-200 dark:bg-rose-950/50 dark:text-rose-300 dark:border-rose-800' : 'bg-emerald-50 text-emerald-700 border border-emerald-200 dark:bg-emerald-950/50 dark:text-emerald-300 dark:border-emerald-800'}`}>
           {message}
         </div>
       )}
 
-      <form onSubmit={handleSubmit} className="card space-y-4">
+      {/* Profile Form */}
+      <form onSubmit={handleSubmit} className="card p-6 space-y-5">
         <div>
-          <label className="block text-sm font-medium mb-2">Profile Image</label>
+          <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-2">
+            Profile Avatar
+          </label>
           <div className="flex flex-wrap items-center gap-4">
-            <img src={avatarSrc} alt="Profile preview" className="h-16 w-16 rounded-full object-cover ring-2 ring-primary-200 dark:ring-primary-700" />
+            <img src={avatarSrc} alt="Profile preview" className="h-16 w-16 rounded-2xl object-cover ring-2 ring-indigo-500/20" />
             <input
               ref={fileInputRef}
               type="file"
@@ -124,43 +139,41 @@ const ProfilePage = () => {
               type="button"
               onClick={() => fileInputRef.current?.click()}
               disabled={uploadingAvatar}
-              className="btn-secondary"
+              className="btn-secondary text-xs font-semibold"
             >
-              <FiUpload className="mr-2" /> {uploadingAvatar ? 'Uploading...' : 'Upload image'}
+              <FiUpload className="mr-1.5" /> {uploadingAvatar ? 'Uploading...' : 'Upload Image'}
             </button>
-            <span className="text-xs text-gray-500 dark:text-gray-400">PNG, JPEG, or WebP · Max 5 MB</span>
+            <span className="text-[11px] text-slate-400 font-mono">PNG, JPEG, or WebP · Max 5 MB</span>
           </div>
         </div>
+
         <div>
-          <label className="block text-sm font-medium mb-1">Full Name</label>
+          <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-1.5">
+            Full Name
+          </label>
           <input
             type="text"
             value={form.full_name}
             onChange={(e) => setForm({ ...form, full_name: e.target.value })}
-            className="input"
+            className="input text-sm font-medium"
+            placeholder="Your full name"
           />
         </div>
+
         <div>
-          <label className="block text-sm font-medium mb-1">Bio</label>
+          <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-1.5">
+            Bio
+          </label>
           <textarea
             value={form.bio}
             onChange={(e) => setForm({ ...form, bio: e.target.value })}
-            className="input min-h-[100px]"
+            className="input min-h-[100px] text-sm font-medium leading-relaxed"
             placeholder="Tell us about yourself..."
           />
         </div>
-        <div>
-          <label className="block text-sm font-medium mb-1">Avatar URL (optional)</label>
-          <input
-            type="url"
-            value={form.avatar_url}
-            onChange={(e) => setForm({ ...form, avatar_url: e.target.value })}
-            className="input"
-            placeholder="https://example.com/avatar.jpg"
-          />
-        </div>
+
         <button type="submit" disabled={saving} className="btn-primary">
-          <FiSave className="mr-2" /> {saving ? 'Saving...' : 'Save Changes'}
+          <FiSave className="mr-1.5" /> {saving ? 'Saving Changes...' : 'Save Profile Changes'}
         </button>
       </form>
     </div>

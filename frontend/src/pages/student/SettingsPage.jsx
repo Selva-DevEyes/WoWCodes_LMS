@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from 'react-redux'
-import { FiMoon, FiSun } from 'react-icons/fi'
+import { FiMoon, FiSun, FiSettings, FiBell } from 'react-icons/fi'
 import { toggleTheme } from '../../redux/slices/themeSlice'
 
 const SettingsPage = () => {
@@ -7,35 +7,62 @@ const SettingsPage = () => {
   const dispatch = useDispatch()
 
   return (
-    <div className="max-w-2xl mx-auto">
-      <h1 className="text-2xl font-bold mb-8">Settings</h1>
+    <div className="max-w-3xl mx-auto space-y-6 font-sans pb-16">
+      {/* Header */}
+      <div className="flex items-center gap-3">
+        <div className="w-12 h-12 rounded-2xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-500 flex items-center justify-center text-2xl shrink-0">
+          <FiSettings />
+        </div>
+        <div>
+          <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
+            Platform Settings
+          </h1>
+          <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-normal mt-1">
+            Customize visual theme preferences and notification options
+          </p>
+        </div>
+      </div>
 
-      <div className="card space-y-6">
-        <div className="flex items-center justify-between">
+      <div className="card p-6 space-y-6">
+        {/* Dark Mode */}
+        <div className="flex items-center justify-between pb-6 border-b border-slate-100 dark:border-slate-800">
           <div>
-            <h2 className="font-semibold">Dark Mode</h2>
-            <p className="text-sm text-gray-500">Toggle between light and dark theme</p>
+            <h2 className="text-base sm:text-lg font-semibold text-slate-900 dark:text-white">
+              Visual Appearance
+            </h2>
+            <p className="text-xs text-slate-500 mt-0.5">
+              Toggle between high-contrast light and corporate dark themes
+            </p>
           </div>
           <button
             onClick={() => dispatch(toggleTheme())}
-            className="p-3 rounded-lg bg-gray-100 dark:bg-gray-700 text-2xl"
+            aria-label="Toggle theme"
+            className="p-3 rounded-2xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-amber-400 hover:scale-105 transition"
           >
-            {theme === 'light' ? <FiMoon /> : <FiSun />}
+            {theme === 'light' ? <FiMoon className="text-xl" /> : <FiSun className="text-xl" />}
           </button>
         </div>
 
-        <div className="border-t border-gray-200 dark:border-gray-600 pt-6">
-          <h2 className="font-semibold mb-2">Notifications</h2>
-          <p className="text-sm text-gray-500 mb-4">
-            Get notified when quizzes are graded and certificates are issued.
-          </p>
-          <div className="flex items-center gap-3">
-            <input type="checkbox" defaultChecked className="w-4 h-4 text-primary-600" />
-            <span className="text-sm">Email notifications</span>
+        {/* Notifications */}
+        <div className="space-y-4">
+          <div>
+            <h2 className="text-base sm:text-lg font-semibold text-slate-900 dark:text-white flex items-center gap-2">
+              <FiBell className="text-indigo-500" /> Notifications & Alerts
+            </h2>
+            <p className="text-xs text-slate-500 mt-0.5">
+              Receive updates when quizzes are evaluated, scores are ranked, or certificates are issued
+            </p>
           </div>
-          <div className="flex items-center gap-3 mt-2">
-            <input type="checkbox" defaultChecked className="w-4 h-4 text-primary-600" />
-            <span className="text-sm">In-app notifications</span>
+
+          <div className="space-y-3 pt-2">
+            <label className="flex items-center gap-3 text-sm font-semibold text-slate-700 dark:text-slate-300 cursor-pointer select-none">
+              <input type="checkbox" defaultChecked className="w-4 h-4 rounded text-indigo-600 focus:ring-indigo-500" />
+              <span>Email study reminders & weekly streak summaries</span>
+            </label>
+            <label className="flex items-center gap-3 text-sm font-semibold text-slate-700 dark:text-slate-300 cursor-pointer select-none">
+              <input type="checkbox" defaultChecked className="w-4 h-4 rounded text-indigo-600 focus:ring-indigo-500" />
+              <span>In-app evaluation feedback & badge awards</span>
+            </label>
           </div>
         </div>
       </div>

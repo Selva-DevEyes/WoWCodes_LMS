@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { FiPlus, FiTrash2, FiEdit2, FiFileText } from 'react-icons/fi'
+import { FiPlus, FiTrash2, FiFileText, FiBookOpen } from 'react-icons/fi'
 import { apiClient } from '../../api/apiClient'
 import { ENDPOINTS } from '../../api/endpoints'
 
@@ -7,7 +7,7 @@ const NotesPage = () => {
   const [notes, setNotes] = useState([])
   const [loading, setLoading] = useState(true)
   const [showForm, setShowForm] = useState(false)
-  const [form, setForm] = useState({ topic_id: 1, title: '', content: '' })
+  const [form, setForm] = useState({ topic_id: 14, title: '', content: '' })
 
   useEffect(() => {
     apiClient.get(ENDPOINTS.notes)
@@ -20,10 +20,11 @@ const NotesPage = () => {
 
   const createNote = async (e) => {
     e.preventDefault()
+    if (!form.title) return
     const { data } = await apiClient.post(ENDPOINTS.notes, form)
     setNotes([data, ...notes])
     setShowForm(false)
-    setForm({ topic_id: 1, title: '', content: '' })
+    setForm({ topic_id: 14, title: '', content: '' })
   }
 
   const deleteNote = async (id) => {
@@ -34,69 +35,94 @@ const NotesPage = () => {
   if (loading) {
     return (
       <div className="flex items-center justify-center h-64">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-600"></div>
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-indigo-600"></div>
       </div>
     )
   }
 
   return (
-    <div>
-      <div className="flex items-center justify-between mb-8">
+    <div className="space-y-6 max-w-7xl mx-auto font-sans pb-16">
+      {/* Header */}
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div className="flex items-center gap-3">
-          <FiFileText className="text-3xl text-primary-600" />
+          <div className="w-12 h-12 rounded-2xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-500 flex items-center justify-center text-2xl shrink-0">
+            <FiFileText />
+          </div>
           <div>
-            <h1 className="text-2xl font-bold">My Notes</h1>
-            <p className="text-gray-500 text-sm">Capture and organize your learning notes</p>
+            <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
+              My Engineering Study Notes
+            </h1>
+            <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-normal mt-1">
+              Capture code snippets, system design insights, and interview tips
+            </p>
           </div>
         </div>
-        <button onClick={() => setShowForm(!showForm)} className="btn-primary">
-          <FiPlus className="mr-2" /> New Note
+
+        <button onClick={() => setShowForm(!showForm)} className="btn-primary self-start sm:self-auto">
+          <FiPlus className="mr-1.5" /> {showForm ? 'Cancel Note' : 'Create New Note'}
         </button>
       </div>
 
       {showForm && (
-        <form onSubmit={createNote} className="card mb-6 space-y-4">
+        <form onSubmit={createNote} className="card p-6 space-y-4 border border-indigo-500/30">
+          <h2 className="text-lg sm:text-xl font-bold tracking-tight text-slate-900 dark:text-white">
+            Add New Study Note
+          </h2>
           <input
             type="text"
-            placeholder="Note title"
+            placeholder="Note title (e.g. Redux Toolkit vs Zustand Architecture)"
             value={form.title}
             onChange={(e) => setForm({ ...form, title: e.target.value })}
-            className="input"
+            className="input text-sm font-medium"
             required
           />
           <textarea
-            placeholder="Write your note..."
+            placeholder="Write your technical study notes here..."
             value={form.content}
             onChange={(e) => setForm({ ...form, content: e.target.value })}
-            className="input min-h-[120px]"
-            required
+            className="input min-h-[120px] text-sm font-medium leading-relaxed"
           />
-          <button type="submit" className="btn-primary">Save Note</button>
+          <button type="submit" className="btn-primary">
+            Save Note
+          </button>
         </form>
       )}
 
       {notes.length === 0 ? (
-        <div className="card text-center py-16">
-          <FiFileText className="text-6xl text-gray-300 mx-auto mb-4" />
-          <p className="text-gray-500">No notes yet. Create your first note!</p>
+        <div className="card text-center py-16 space-y-3">
+          <div className="w-16 h-16 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-400 mx-auto flex items-center justify-center text-3xl">
+            <FiFileText />
+          </div>
+          <h2 className="text-lg sm:text-xl font-bold tracking-tight text-slate-800 dark:text-slate-200">
+            No Study Notes Created Yet
+          </h2>
+          <p className="text-xs sm:text-sm text-slate-500 max-w-md mx-auto">
+            Click 'Create New Note' above to start organizing your key algorithmic patterns and interview tips.
+          </p>
         </div>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {notes.map((note) => (
-            <div key={note.id} className="card group relative">
-              <button
-                onClick={() => deleteNote(note.id)}
-                className="absolute top-4 right-4 p-2 text-gray-400 hover:text-red-600 opacity-0 group-hover:opacity-100 transition-opacity"
-              >
-                <FiTrash2 />
-              </button>
-              <h3 className="font-semibold mb-2 pr-8">{note.title}</h3>
-              <p className="text-sm text-gray-600 dark:text-gray-400 line-clamp-5 whitespace-pre-wrap">
-                {note.content}
-              </p>
-              <p className="text-xs text-gray-400 mt-4">
-                {new Date(note.updated_at).toLocaleDateString()}
-              </p>
+            <div key={note.id} className="card p-5 space-y-3 flex flex-col justify-between hover:border-slate-300 dark:hover:border-slate-700 transition">
+              <div>
+                <h3 className="text-base sm:text-lg font-semibold text-slate-900 dark:text-white tracking-normal line-clamp-1">
+                  {note.title}
+                </h3>
+                <p className="text-xs text-slate-600 dark:text-slate-300 mt-2 line-clamp-4 leading-relaxed whitespace-pre-wrap font-normal">
+                  {note.content}
+                </p>
+              </div>
+
+              <div className="flex items-center justify-between pt-3 border-t border-slate-100 dark:border-slate-800/80 text-xs text-slate-400">
+                <span className="font-mono text-[11px]">{new Date(note.created_at).toLocaleDateString()}</span>
+                <button
+                  onClick={() => deleteNote(note.id)}
+                  className="text-rose-500 hover:text-rose-600 p-1 rounded-lg hover:bg-rose-50 dark:hover:bg-rose-950/50 transition"
+                  aria-label="Delete note"
+                >
+                  <FiTrash2 className="w-4 h-4" />
+                </button>
+              </div>
             </div>
           ))}
         </div>
