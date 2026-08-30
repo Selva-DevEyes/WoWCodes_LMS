@@ -1,13 +1,10 @@
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { useDispatch } from 'react-redux'
 import { FiUser, FiMail, FiLock, FiLoader, FiArrowRight } from 'react-icons/fi'
 import { apiClient } from '../../api/apiClient'
 import { ENDPOINTS } from '../../api/endpoints'
-import { setCredentials, setUser } from '../../redux/slices/authSlice'
 
 const Register = () => {
-  const dispatch = useDispatch()
   const navigate = useNavigate()
   const [form, setForm] = useState({
     email: '',
@@ -28,7 +25,7 @@ const Register = () => {
     setLoading(true)
     setError('')
     try {
-      // 1. Create the new user account in database
+      // 1. Create the new user account in the database
       await apiClient.post(ENDPOINTS.register, {
         email: form.email,
         username: form.username,
@@ -36,18 +33,13 @@ const Register = () => {
         password: form.password,
       })
 
-      // 2. Automatically log the student in immediately
-      const { data: authData } = await apiClient.post(ENDPOINTS.login, {
-        email: form.email,
-        password: form.password,
+      // 2. Redirect to Login page with prefilled email and success confirmation
+      navigate('/login', {
+        state: {
+          registeredEmail: form.email,
+          successMessage: 'Account created successfully! Please enter your password to sign in.',
+        },
       })
-      dispatch(setCredentials(authData))
-
-      const me = await apiClient.get(ENDPOINTS.me)
-      dispatch(setUser(me.data))
-
-      // 3. Navigate directly to active learning dashboard
-      navigate('/dashboard')
     } catch (err) {
       const errorMsg = err.response?.data?.detail || 'Registration failed. Please check your credentials.'
       setError(typeof errorMsg === 'string' ? errorMsg : JSON.stringify(errorMsg))
@@ -160,11 +152,11 @@ const Register = () => {
         <button type="submit" disabled={loading} className="btn-primary w-full py-3">
           {loading ? (
             <span className="inline-flex items-center gap-2">
-              <FiLoader className="animate-spin" /> Creating Account & Authenticating...
+              <FiLoader className="animate-spin" /> Creating Account...
             </span>
           ) : (
             <span className="inline-flex items-center gap-2">
-              Create Account & Enter LMS <FiArrowRight />
+              Register & Proceed to Login <FiArrowRight />
             </span>
           )}
         </button>
