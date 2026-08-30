@@ -147,21 +147,30 @@ const TopicDetail = () => {
           </div>
 
           {submissionResult ? (
-            <div className="p-6 rounded-2xl bg-emerald-950/40 border border-emerald-500/40 text-emerald-100 text-center space-y-4">
-              <FiAward className="w-16 h-16 text-emerald-400 mx-auto animate-bounce" />
-              <h3 className="text-2xl font-black text-white">Capstone Evaluation Approved! 🎉</h3>
-              <p className="text-sm text-slate-300 max-w-md mx-auto">
-                Your practical project has been evaluated and your official certification certificate has been generated!
-              </p>
-              <div className="inline-block bg-slate-950 px-6 py-3 rounded-2xl border border-emerald-500/30 font-mono text-indigo-300 font-extrabold text-lg">
-                Certificate ID: {submissionResult.certificate_code}
+            <div className="p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-emerald-950/60 to-slate-950 border border-emerald-500/40 text-emerald-100 text-center space-y-4 shadow-xl">
+              <div className="w-16 h-16 rounded-full bg-emerald-500/20 text-emerald-400 mx-auto flex items-center justify-center text-3xl border border-emerald-500/40 animate-bounce">
+                <FiAward />
               </div>
-              <div>
+              <h3 className="text-2xl sm:text-3xl font-serif font-black text-white">
+                Capstone Project Evaluated & Approved! 🎉
+              </h3>
+              <p className="text-sm text-slate-300 max-w-lg mx-auto leading-relaxed">
+                Awarded to <strong className="text-white font-bold">{submissionResult.student_name}</strong> with <strong className="text-amber-400 font-bold">{submissionResult.grade}</strong>.
+              </p>
+              <div className="bg-slate-900/90 border-l-4 border-emerald-500 p-4 rounded-r-2xl max-w-xl mx-auto text-left">
+                <p className="text-xs sm:text-sm font-serif italic text-slate-300">
+                  "{submissionResult.congrats_quote}"
+                </p>
+              </div>
+              <div className="inline-block bg-slate-950 px-6 py-3 rounded-2xl border border-emerald-500/30 font-mono text-indigo-300 font-extrabold text-base">
+                Certificate Credential ID: {submissionResult.certificate_code}
+              </div>
+              <div className="pt-2">
                 <Link
                   to="/certificates"
-                  className="px-6 py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs rounded-xl inline-flex items-center gap-2 transition"
+                  className="px-6 py-3.5 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-bold text-xs rounded-xl inline-flex items-center gap-2 transition shadow-lg shadow-emerald-600/30"
                 >
-                  View & Download Official Certificate <FiAward />
+                  View & Download Official Diploma Certificate <FiAward className="text-base" />
                 </Link>
               </div>
             </div>
