@@ -1,0 +1,3 @@
+# types
+
+Type definitions (JSDoc).

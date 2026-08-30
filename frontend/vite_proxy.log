@@ -1,0 +1,673 @@
+
+> wowcodes-frontend@1.0.0 dev
+> vite
+
+Port 5173 is in use, trying another one...
+
+  [32m[1mVITE[22m v6.4.3[39m  [2mready in [0m[1m7658[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5174[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[2m1:16:12 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/routes/AppRoutes.jsx, /src/styles/index.css[22m
+[2m1:16:12 PM[22m [31m[1m[vite][22m[39m [31mInternal server error: E:\learning\Masai\capstone\frontend\src\routes\AppRoutes.jsx: Unexpected token (40:8)
+
+[0m [90m 38 |[31m         [33m<[31m[33mRoute[31m path[33m=[31m[32m"/dashboard"[31m element[33m=[31m{[33m<[31m[33mDashboard[31m [35m/>} /[31m[33m>[31m
+ [90m 39 |[31m         [33m<[31m[33mRoute[31m path
+[31m[1m>[22m[31m[90m 40 |[31m         [33m<[31m[33mRoute[31m path[33m=[31m[32m"/quiz/:quizId"[31m element[33m=[31m{[33m<[31m[33mQuizPage[31m [35m/>} /[31m[33m>[31m
+ [90m    |[31m         [31m[1m^[22m[31m
+ [90m 41 |[31m         [33m<[31m[33mRoute[31m path[33m=[31m[32m"/quiz/result/:resultId"[31m element[33m=[31m{[33m<[31m[33mQuizResultPage[31m [35m/>} /[31m[33m>[31m
+ [90m 42 |[31m         [33m<[31m[33mRoute[31m path[33m=[31m[32m"/leaderboard"[31m element[33m=[31m{[33m<[31m[33mLeaderboardPage[31m [35m/>} /[31m[33m>[31m
+ [90m 43 |[31m         [33m<[31m[33mRoute[31m path[33m=[31m[32m"/certificates"[31m element[33m=[31m{[33m<[31m[33mCertificatesPage[31m [35m/>} /[31m[33m>[31m[0m[39m
+  Plugin: [35mvite:react-babel[39m
+  File: [36mE:/learning/Masai/capstone/frontend/src/routes/AppRoutes.jsx[39m:40:8
+[33m  38 |          <Route path="/dashboard" element={<Dashboard />} />
+  39 |          <Route path
+  40 |          <Route path="/quiz/:quizId" element={<QuizPage />} />
+     |                                                 ^
+  41 |          <Route path="/quiz/result/:resultId" element={<QuizResultPage />} />
+  42 |          <Route path="/leaderboard" element={<LeaderboardPage />} />[39m
+      at constructor (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:369:19)
+      at JSXParserMixin.raise (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:6620:19)
+      at JSXParserMixin.unexpected (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:6640:16)
+      at JSXParserMixin.jsxParseIdentifier (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:4585:12)
+      at JSXParserMixin.jsxParseNamespacedName (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:4592:23)
+      at JSXParserMixin.jsxParseAttribute (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:4668:22)
+      at JSXParserMixin.jsxParseOpeningElementAfterName (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:4683:28)
+      at JSXParserMixin.jsxParseOpeningElementAt (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:4678:17)
+      at JSXParserMixin.jsxParseElementAt (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:4702:33)
+      at JSXParserMixin.jsxParseElementAt (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:4714:32)
+      at JSXParserMixin.jsxParseElementAt (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:4714:32)
+      at JSXParserMixin.jsxParseElement (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:4765:17)
+      at JSXParserMixin.parseExprAtom (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:4775:19)
+      at JSXParserMixin.parseExprSubscripts (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:11102:23)
+      at JSXParserMixin.parseUpdate (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:11087:21)
+      at JSXParserMixin.parseMaybeUnary (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:11067:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:10920:61)
+      at JSXParserMixin.parseExprOps (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:10925:23)
+      at JSXParserMixin.parseMaybeConditional (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:10902:23)
+      at JSXParserMixin.parseMaybeAssign (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:10852:21)
+      at E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:10821:39
+      at JSXParserMixin.allowInAnd (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:12455:12)
+      at JSXParserMixin.parseMaybeAssignAllowIn (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:10821:17)
+      at JSXParserMixin.parseMaybeAssignAllowInOrVoidPattern (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:12522:17)
+      at JSXParserMixin.parseParenAndDistinguishExpression (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:11701:28)
+      at JSXParserMixin.parseExprAtom (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:11357:23)
+      at JSXParserMixin.parseExprAtom (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:4780:20)
+      at JSXParserMixin.parseExprSubscripts (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:11102:23)
+      at JSXParserMixin.parseUpdate (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:11087:21)
+      at JSXParserMixin.parseMaybeUnary (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:11067:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:10920:61)
+      at JSXParserMixin.parseExprOps (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:10925:23)
+      at JSXParserMixin.parseMaybeConditional (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:10902:23)
+      at JSXParserMixin.parseMaybeAssign (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:10852:21)
+      at JSXParserMixin.parseExpressionBase (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:10805:23)
+      at E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:10801:39
+      at JSXParserMixin.allowInAnd (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:12450:16)
+      at JSXParserMixin.parseExpression (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:10801:17)
+      at JSXParserMixin.parseReturnStatement (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:13171:28)
+      at JSXParserMixin.parseStatementContent (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:12827:21)
+      at JSXParserMixin.parseStatementLike (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:12796:17)
+      at JSXParserMixin.parseStatementListItem (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:12776:17)
+      at JSXParserMixin.parseBlockOrModuleBlockBody (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:13345:61)
+      at JSXParserMixin.parseBlockBody (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:13338:10)
+      at JSXParserMixin.parseBlock (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:13326:10)
+      at JSXParserMixin.parseFunctionBody (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:12129:24)
+      at JSXParserMixin.parseFunctionBodyAndFinish (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:12115:10)
+      at E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:13474:12
+      at JSXParserMixin.withSmartMixTopicForbiddingContext (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:12432:14)
+      at JSXParserMixin.parseFunction (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:13473:10)
+[2m1:16:12 PM[22m [31m[1m[vite][22m[39m [31mInternal server error: E:\learning\Masai\capstone\frontend\src\routes\AppRoutes.jsx: Unexpected token (40:8)
+
+[0m [90m 38 |[31m         [33m<[31m[33mRoute[31m path[33m=[31m[32m"/dashboard"[31m element[33m=[31m{[33m<[31m[33mDashboard[31m [35m/>} /[31m[33m>[31m
+ [90m 39 |[31m         [33m<[31m[33mRoute[31m path
+[31m[1m>[22m[31m[90m 40 |[31m         [33m<[31m[33mRoute[31m path[33m=[31m[32m"/quiz/:quizId"[31m element[33m=[31m{[33m<[31m[33mQuizPage[31m [35m/>} /[31m[33m>[31m
+ [90m    |[31m         [31m[1m^[22m[31m
+ [90m 41 |[31m         [33m<[31m[33mRoute[31m path[33m=[31m[32m"/quiz/result/:resultId"[31m element[33m=[31m{[33m<[31m[33mQuizResultPage[31m [35m/>} /[31m[33m>[31m
+ [90m 42 |[31m         [33m<[31m[33mRoute[31m path[33m=[31m[32m"/leaderboard"[31m element[33m=[31m{[33m<[31m[33mLeaderboardPage[31m [35m/>} /[31m[33m>[31m
+ [90m 43 |[31m         [33m<[31m[33mRoute[31m path[33m=[31m[32m"/certificates"[31m element[33m=[31m{[33m<[31m[33mCertificatesPage[31m [35m/>} /[31m[33m>[31m[0m[39m
+  Plugin: [35mvite:react-babel[39m
+  File: [36mE:/learning/Masai/capstone/frontend/src/routes/AppRoutes.jsx[39m:40:8
+[33m  38 |          <Route path="/dashboard" element={<Dashboard />} />
+  39 |          <Route path
+  40 |          <Route path="/quiz/:quizId" element={<QuizPage />} />
+     |                                                 ^
+  41 |          <Route path="/quiz/result/:resultId" element={<QuizResultPage />} />
+  42 |          <Route path="/leaderboard" element={<LeaderboardPage />} />[39m
+      at constructor (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:369:19)
+      at JSXParserMixin.raise (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:6620:19)
+      at JSXParserMixin.unexpected (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:6640:16)
+      at JSXParserMixin.jsxParseIdentifier (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:4585:12)
+      at JSXParserMixin.jsxParseNamespacedName (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:4592:23)
+      at JSXParserMixin.jsxParseAttribute (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:4668:22)
+      at JSXParserMixin.jsxParseOpeningElementAfterName (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:4683:28)
+      at JSXParserMixin.jsxParseOpeningElementAt (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:4678:17)
+      at JSXParserMixin.jsxParseElementAt (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:4702:33)
+      at JSXParserMixin.jsxParseElementAt (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:4714:32)
+      at JSXParserMixin.jsxParseElementAt (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:4714:32)
+      at JSXParserMixin.jsxParseElement (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:4765:17)
+      at JSXParserMixin.parseExprAtom (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:4775:19)
+      at JSXParserMixin.parseExprSubscripts (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:11102:23)
+      at JSXParserMixin.parseUpdate (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:11087:21)
+      at JSXParserMixin.parseMaybeUnary (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:11067:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:10920:61)
+      at JSXParserMixin.parseExprOps (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:10925:23)
+      at JSXParserMixin.parseMaybeConditional (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:10902:23)
+      at JSXParserMixin.parseMaybeAssign (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:10852:21)
+      at E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:10821:39
+      at JSXParserMixin.allowInAnd (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:12455:12)
+      at JSXParserMixin.parseMaybeAssignAllowIn (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:10821:17)
+      at JSXParserMixin.parseMaybeAssignAllowInOrVoidPattern (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:12522:17)
+      at JSXParserMixin.parseParenAndDistinguishExpression (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:11701:28)
+      at JSXParserMixin.parseExprAtom (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:11357:23)
+      at JSXParserMixin.parseExprAtom (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:4780:20)
+      at JSXParserMixin.parseExprSubscripts (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:11102:23)
+      at JSXParserMixin.parseUpdate (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:11087:21)
+      at JSXParserMixin.parseMaybeUnary (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:11067:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:10920:61)
+      at JSXParserMixin.parseExprOps (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:10925:23)
+      at JSXParserMixin.parseMaybeConditional (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:10902:23)
+      at JSXParserMixin.parseMaybeAssign (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:10852:21)
+      at JSXParserMixin.parseExpressionBase (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:10805:23)
+      at E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:10801:39
+      at JSXParserMixin.allowInAnd (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:12450:16)
+      at JSXParserMixin.parseExpression (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:10801:17)
+      at JSXParserMixin.parseReturnStatement (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:13171:28)
+      at JSXParserMixin.parseStatementContent (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:12827:21)
+      at JSXParserMixin.parseStatementLike (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:12796:17)
+      at JSXParserMixin.parseStatementListItem (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:12776:17)
+      at JSXParserMixin.parseBlockOrModuleBlockBody (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:13345:61)
+      at JSXParserMixin.parseBlockBody (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:13338:10)
+      at JSXParserMixin.parseBlock (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:13326:10)
+      at JSXParserMixin.parseFunctionBody (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:12129:24)
+      at JSXParserMixin.parseFunctionBodyAndFinish (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:12115:10)
+      at E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:13474:12
+      at JSXParserMixin.withSmartMixTopicForbiddingContext (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:12432:14)
+      at JSXParserMixin.parseFunction (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:13473:10)
+[2m1:16:12 PM[22m [31m[1m[vite][22m[39m [31mInternal server error: E:\learning\Masai\capstone\frontend\src\routes\AppRoutes.jsx: Unexpected token (40:8)
+
+[0m [90m 38 |[31m         [33m<[31m[33mRoute[31m path[33m=[31m[32m"/dashboard"[31m element[33m=[31m{[33m<[31m[33mDashboard[31m [35m/>} /[31m[33m>[31m
+ [90m 39 |[31m         [33m<[31m[33mRoute[31m path
+[31m[1m>[22m[31m[90m 40 |[31m         [33m<[31m[33mRoute[31m path[33m=[31m[32m"/quiz/:quizId"[31m element[33m=[31m{[33m<[31m[33mQuizPage[31m [35m/>} /[31m[33m>[31m
+ [90m    |[31m         [31m[1m^[22m[31m
+ [90m 41 |[31m         [33m<[31m[33mRoute[31m path[33m=[31m[32m"/quiz/result/:resultId"[31m element[33m=[31m{[33m<[31m[33mQuizResultPage[31m [35m/>} /[31m[33m>[31m
+ [90m 42 |[31m         [33m<[31m[33mRoute[31m path[33m=[31m[32m"/leaderboard"[31m element[33m=[31m{[33m<[31m[33mLeaderboardPage[31m [35m/>} /[31m[33m>[31m
+ [90m 43 |[31m         [33m<[31m[33mRoute[31m path[33m=[31m[32m"/certificates"[31m element[33m=[31m{[33m<[31m[33mCertificatesPage[31m [35m/>} /[31m[33m>[31m[0m[39m
+  Plugin: [35mvite:react-babel[39m
+  File: [36mE:/learning/Masai/capstone/frontend/src/routes/AppRoutes.jsx[39m:40:8
+[33m  38 |          <Route path="/dashboard" element={<Dashboard />} />
+  39 |          <Route path
+  40 |          <Route path="/quiz/:quizId" element={<QuizPage />} />
+     |                                                 ^
+  41 |          <Route path="/quiz/result/:resultId" element={<QuizResultPage />} />
+  42 |          <Route path="/leaderboard" element={<LeaderboardPage />} />[39m
+      at constructor (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:369:19)
+      at JSXParserMixin.raise (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:6620:19)
+      at JSXParserMixin.unexpected (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:6640:16)
+      at JSXParserMixin.jsxParseIdentifier (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:4585:12)
+      at JSXParserMixin.jsxParseNamespacedName (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:4592:23)
+      at JSXParserMixin.jsxParseAttribute (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:4668:22)
+      at JSXParserMixin.jsxParseOpeningElementAfterName (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:4683:28)
+      at JSXParserMixin.jsxParseOpeningElementAt (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:4678:17)
+      at JSXParserMixin.jsxParseElementAt (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:4702:33)
+      at JSXParserMixin.jsxParseElementAt (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:4714:32)
+      at JSXParserMixin.jsxParseElementAt (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:4714:32)
+      at JSXParserMixin.jsxParseElement (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:4765:17)
+      at JSXParserMixin.parseExprAtom (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:4775:19)
+      at JSXParserMixin.parseExprSubscripts (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:11102:23)
+      at JSXParserMixin.parseUpdate (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:11087:21)
+      at JSXParserMixin.parseMaybeUnary (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:11067:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:10920:61)
+      at JSXParserMixin.parseExprOps (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:10925:23)
+      at JSXParserMixin.parseMaybeConditional (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:10902:23)
+      at JSXParserMixin.parseMaybeAssign (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:10852:21)
+      at E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:10821:39
+      at JSXParserMixin.allowInAnd (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:12455:12)
+      at JSXParserMixin.parseMaybeAssignAllowIn (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:10821:17)
+      at JSXParserMixin.parseMaybeAssignAllowInOrVoidPattern (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:12522:17)
+      at JSXParserMixin.parseParenAndDistinguishExpression (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:11701:28)
+      at JSXParserMixin.parseExprAtom (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:11357:23)
+      at JSXParserMixin.parseExprAtom (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:4780:20)
+      at JSXParserMixin.parseExprSubscripts (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:11102:23)
+      at JSXParserMixin.parseUpdate (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:11087:21)
+      at JSXParserMixin.parseMaybeUnary (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:11067:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:10920:61)
+      at JSXParserMixin.parseExprOps (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:10925:23)
+      at JSXParserMixin.parseMaybeConditional (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:10902:23)
+      at JSXParserMixin.parseMaybeAssign (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:10852:21)
+      at JSXParserMixin.parseExpressionBase (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:10805:23)
+      at E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:10801:39
+      at JSXParserMixin.allowInAnd (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:12450:16)
+      at JSXParserMixin.parseExpression (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:10801:17)
+      at JSXParserMixin.parseReturnStatement (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:13171:28)
+      at JSXParserMixin.parseStatementContent (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:12827:21)
+      at JSXParserMixin.parseStatementLike (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:12796:17)
+      at JSXParserMixin.parseStatementListItem (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:12776:17)
+      at JSXParserMixin.parseBlockOrModuleBlockBody (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:13345:61)
+      at JSXParserMixin.parseBlockBody (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:13338:10)
+      at JSXParserMixin.parseBlock (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:13326:10)
+      at JSXParserMixin.parseFunctionBody (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:12129:24)
+      at JSXParserMixin.parseFunctionBodyAndFinish (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:12115:10)
+      at E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:13474:12
+      at JSXParserMixin.withSmartMixTopicForbiddingContext (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:12432:14)
+      at JSXParserMixin.parseFunction (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:13473:10)
+[2m1:16:13 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/routes/AppRoutes.jsx, /src/styles/index.css[22m
+[2m1:16:15 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: E:\learning\Masai\capstone\frontend\src\pages\student\CourseDetail.jsx: Missing semicolon. (1:12)
+
+[0m[31m[1m>[22m[39m[90m 1 |[39m [33mScriptimport[39m { useEffect[33m,[39m useState } [36mfrom[39m [32m'react'[39m
+ [90m   |[39m             [31m[1m^[22m[39m
+ [90m 2 |[39m [36mimport[39m { useParams[33m,[39m [33mLink[39m } [36mfrom[39m [32m'react-router-dom'[39m
+ [90m 3 |[39m [36mimport[39m { [33mFiArrowLeft[39m[33m,[39m [33mFiClock[39m[33m,[39m [33mFiChevronRight[39m[33m,[39m [33mFiBookOpen[39m[33m,[39m [33mFiClipboard[39m } [36mfrom[39m [32m'react-icons/fi'[39m
+ [90m 4 |[39m [36mimport[39m { apiClient } [36mfrom[39m [32m'../../api/apiClient'[39m[0m
+  Plugin: [35mvite:react-babel[39m
+  File: [36mE:/learning/Masai/capstone/frontend/src/pages/student/CourseDetail.jsx[39m:1:12
+[33m  1  |  Scriptimport { useEffect, useState } from 'react'
+     |              ^
+  2  |  import { useParams, Link } from 'react-router-dom'
+  3  |  import { FiArrowLeft, FiClock, FiChevronRight, FiBookOpen, FiClipboard } from 'react-icons/fi'[39m
+[2m1:16:15 PM[22m [31m[1m[vite][22m[39m [31mInternal server error: E:\learning\Masai\capstone\frontend\src\pages\student\CourseDetail.jsx: Missing semicolon. (1:12)
+
+[0m[31m[1m>[22m[31m[90m 1 |[31m [33mScriptimport[31m { useEffect[33m,[31m useState } [36mfrom[31m [32m'react'[31m
+ [90m   |[31m             [31m[1m^[22m[31m
+ [90m 2 |[31m [36mimport[31m { useParams[33m,[31m [33mLink[31m } [36mfrom[31m [32m'react-router-dom'[31m
+ [90m 3 |[31m [36mimport[31m { [33mFiArrowLeft[31m[33m,[31m [33mFiClock[31m[33m,[31m [33mFiChevronRight[31m[33m,[31m [33mFiBookOpen[31m[33m,[31m [33mFiClipboard[31m } [36mfrom[31m [32m'react-icons/fi'[31m
+ [90m 4 |[31m [36mimport[31m { apiClient } [36mfrom[31m [32m'../../api/apiClient'[31m[0m[39m
+  Plugin: [35mvite:react-babel[39m
+  File: [36mE:/learning/Masai/capstone/frontend/src/pages/student/CourseDetail.jsx[39m:1:12
+[33m  1  |  Scriptimport { useEffect, useState } from 'react'
+     |              ^
+  2  |  import { useParams, Link } from 'react-router-dom'
+  3  |  import { FiArrowLeft, FiClock, FiChevronRight, FiBookOpen, FiClipboard } from 'react-icons/fi'[39m
+      at constructor (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:369:19)
+      at JSXParserMixin.raise (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:6620:19)
+      at JSXParserMixin.semicolon (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:6916:10)
+      at JSXParserMixin.parseExpressionStatement (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:13314:10)
+      at JSXParserMixin.parseStatementContent (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:12928:19)
+      at JSXParserMixin.parseStatementLike (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:12796:17)
+      at JSXParserMixin.parseModuleItem (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:12773:17)
+      at JSXParserMixin.parseBlockOrModuleBlockBody (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:13345:36)
+      at JSXParserMixin.parseBlockBody (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:13338:10)
+      at JSXParserMixin.parseProgram (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:12651:10)
+      at JSXParserMixin.parseTopLevel (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:12641:25)
+      at JSXParserMixin.parse (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:14517:25)
+      at parse (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:14551:38)
+      at parser (E:\learning\Masai\capstone\frontend\node_modules\@babel\core\lib\parser\index.js:41:34)
+      at parser.next (<anonymous>)
+      at normalizeFile (E:\learning\Masai\capstone\frontend\node_modules\@babel\core\lib\transformation\normalize-file.js:51:37)
+      at normalizeFile.next (<anonymous>)
+      at run (E:\learning\Masai\capstone\frontend\node_modules\@babel\core\lib\transformation\index.js:22:50)
+      at run.next (<anonymous>)
+      at transform (E:\learning\Masai\capstone\frontend\node_modules\@babel\core\lib\transform.js:22:33)
+      at transform.next (<anonymous>)
+      at step (E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:261:32)
+      at E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:273:13
+      at async.call.result.err.err (E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:223:11)
+      at E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:189:28
+      at E:\learning\Masai\capstone\frontend\node_modules\@babel\core\lib\gensync-utils\async.js:67:7
+      at E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:113:33
+      at step (E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:287:14)
+      at E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:273:13
+      at async.call.result.err.err (E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:223:11)
+[2m1:16:15 PM[22m [31m[1m[vite][22m[39m [31mInternal server error: E:\learning\Masai\capstone\frontend\src\pages\student\CourseDetail.jsx: Missing semicolon. (1:12)
+
+[0m[31m[1m>[22m[31m[90m 1 |[31m [33mScriptimport[31m { useEffect[33m,[31m useState } [36mfrom[31m [32m'react'[31m
+ [90m   |[31m             [31m[1m^[22m[31m
+ [90m 2 |[31m [36mimport[31m { useParams[33m,[31m [33mLink[31m } [36mfrom[31m [32m'react-router-dom'[31m
+ [90m 3 |[31m [36mimport[31m { [33mFiArrowLeft[31m[33m,[31m [33mFiClock[31m[33m,[31m [33mFiChevronRight[31m[33m,[31m [33mFiBookOpen[31m[33m,[31m [33mFiClipboard[31m } [36mfrom[31m [32m'react-icons/fi'[31m
+ [90m 4 |[31m [36mimport[31m { apiClient } [36mfrom[31m [32m'../../api/apiClient'[31m[0m[39m
+  Plugin: [35mvite:react-babel[39m
+  File: [36mE:/learning/Masai/capstone/frontend/src/pages/student/CourseDetail.jsx[39m:1:12
+[33m  1  |  Scriptimport { useEffect, useState } from 'react'
+     |              ^
+  2  |  import { useParams, Link } from 'react-router-dom'
+  3  |  import { FiArrowLeft, FiClock, FiChevronRight, FiBookOpen, FiClipboard } from 'react-icons/fi'[39m
+      at constructor (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:369:19)
+      at JSXParserMixin.raise (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:6620:19)
+      at JSXParserMixin.semicolon (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:6916:10)
+      at JSXParserMixin.parseExpressionStatement (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:13314:10)
+      at JSXParserMixin.parseStatementContent (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:12928:19)
+      at JSXParserMixin.parseStatementLike (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:12796:17)
+      at JSXParserMixin.parseModuleItem (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:12773:17)
+      at JSXParserMixin.parseBlockOrModuleBlockBody (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:13345:36)
+      at JSXParserMixin.parseBlockBody (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:13338:10)
+      at JSXParserMixin.parseProgram (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:12651:10)
+      at JSXParserMixin.parseTopLevel (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:12641:25)
+      at JSXParserMixin.parse (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:14517:25)
+      at parse (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:14551:38)
+      at parser (E:\learning\Masai\capstone\frontend\node_modules\@babel\core\lib\parser\index.js:41:34)
+      at parser.next (<anonymous>)
+      at normalizeFile (E:\learning\Masai\capstone\frontend\node_modules\@babel\core\lib\transformation\normalize-file.js:51:37)
+      at normalizeFile.next (<anonymous>)
+      at run (E:\learning\Masai\capstone\frontend\node_modules\@babel\core\lib\transformation\index.js:22:50)
+      at run.next (<anonymous>)
+      at transform (E:\learning\Masai\capstone\frontend\node_modules\@babel\core\lib\transform.js:22:33)
+      at transform.next (<anonymous>)
+      at step (E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:261:32)
+      at E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:273:13
+      at async.call.result.err.err (E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:223:11)
+      at E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:189:28
+      at E:\learning\Masai\capstone\frontend\node_modules\@babel\core\lib\gensync-utils\async.js:67:7
+      at E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:113:33
+      at step (E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:287:14)
+      at E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:273:13
+      at async.call.result.err.err (E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:223:11)
+[2m1:16:15 PM[22m [31m[1m[vite][22m[39m [31mInternal server error: E:\learning\Masai\capstone\frontend\src\pages\student\CourseDetail.jsx: Missing semicolon. (1:12)
+
+[0m[31m[1m>[22m[31m[90m 1 |[31m [33mScriptimport[31m { useEffect[33m,[31m useState } [36mfrom[31m [32m'react'[31m
+ [90m   |[31m             [31m[1m^[22m[31m
+ [90m 2 |[31m [36mimport[31m { useParams[33m,[31m [33mLink[31m } [36mfrom[31m [32m'react-router-dom'[31m
+ [90m 3 |[31m [36mimport[31m { [33mFiArrowLeft[31m[33m,[31m [33mFiClock[31m[33m,[31m [33mFiChevronRight[31m[33m,[31m [33mFiBookOpen[31m[33m,[31m [33mFiClipboard[31m } [36mfrom[31m [32m'react-icons/fi'[31m
+ [90m 4 |[31m [36mimport[31m { apiClient } [36mfrom[31m [32m'../../api/apiClient'[31m[0m[39m
+  Plugin: [35mvite:react-babel[39m
+  File: [36mE:/learning/Masai/capstone/frontend/src/pages/student/CourseDetail.jsx[39m:1:12
+[33m  1  |  Scriptimport { useEffect, useState } from 'react'
+     |              ^
+  2  |  import { useParams, Link } from 'react-router-dom'
+  3  |  import { FiArrowLeft, FiClock, FiChevronRight, FiBookOpen, FiClipboard } from 'react-icons/fi'[39m
+      at constructor (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:369:19)
+      at JSXParserMixin.raise (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:6620:19)
+      at JSXParserMixin.semicolon (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:6916:10)
+      at JSXParserMixin.parseExpressionStatement (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:13314:10)
+      at JSXParserMixin.parseStatementContent (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:12928:19)
+      at JSXParserMixin.parseStatementLike (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:12796:17)
+      at JSXParserMixin.parseModuleItem (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:12773:17)
+      at JSXParserMixin.parseBlockOrModuleBlockBody (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:13345:36)
+      at JSXParserMixin.parseBlockBody (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:13338:10)
+      at JSXParserMixin.parseProgram (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:12651:10)
+      at JSXParserMixin.parseTopLevel (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:12641:25)
+      at JSXParserMixin.parse (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:14517:25)
+      at parse (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:14551:38)
+      at parser (E:\learning\Masai\capstone\frontend\node_modules\@babel\core\lib\parser\index.js:41:34)
+      at parser.next (<anonymous>)
+      at normalizeFile (E:\learning\Masai\capstone\frontend\node_modules\@babel\core\lib\transformation\normalize-file.js:51:37)
+      at normalizeFile.next (<anonymous>)
+      at run (E:\learning\Masai\capstone\frontend\node_modules\@babel\core\lib\transformation\index.js:22:50)
+      at run.next (<anonymous>)
+      at transform (E:\learning\Masai\capstone\frontend\node_modules\@babel\core\lib\transform.js:22:33)
+      at transform.next (<anonymous>)
+      at step (E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:261:32)
+      at E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:273:13
+      at async.call.result.err.err (E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:223:11)
+      at E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:189:28
+      at E:\learning\Masai\capstone\frontend\node_modules\@babel\core\lib\gensync-utils\async.js:67:7
+      at E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:113:33
+      at step (E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:287:14)
+      at E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:273:13
+      at async.call.result.err.err (E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:223:11)
+[2m1:16:16 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/routes/AppRoutes.jsx, /src/styles/index.css[22m
+[2m1:16:16 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: E:\learning\Masai\capstone\frontend\src\pages\student\CourseDetail.jsx: Missing semicolon. (1:12)
+
+[0m[31m[1m>[22m[39m[90m 1 |[39m [33mScriptimport[39m { useEffect[33m,[39m useState } [36mfrom[39m [32m'react'[39m
+ [90m   |[39m             [31m[1m^[22m[39m
+ [90m 2 |[39m [36mimport[39m { useParams[33m,[39m [33mLink[39m } [36mfrom[39m [32m'react-router-dom'[39m
+ [90m 3 |[39m [36mimport[39m { [33mFiArrowLeft[39m[33m,[39m [33mFiClock[39m[33m,[39m [33mFiChevronRight[39m[33m,[39m [33mFiBookOpen[39m[33m,[39m [33mFiClipboard[39m } [36mfrom[39m [32m'react-icons/fi'[39m
+ [90m 4 |[39m [36mimport[39m { apiClient } [36mfrom[39m [32m'../../api/apiClient'[39m[0m
+  Plugin: [35mvite:react-babel[39m
+  File: [36mE:/learning/Masai/capstone/frontend/src/pages/student/CourseDetail.jsx[39m:1:12
+[33m  1  |  Scriptimport { useEffect, useState } from 'react'
+     |              ^
+  2  |  import { useParams, Link } from 'react-router-dom'
+  3  |  import { FiArrowLeft, FiClock, FiChevronRight, FiBookOpen, FiClipboard } from 'react-icons/fi'[39m
+[2m1:26:25 PM[22m [31m[1m[vite][22m[39m [31mInternal server error: E:\learning\Masai\capstone\frontend\src\pages\student\CourseDetail.jsx: Missing semicolon. (1:12)
+
+[0m[31m[1m>[22m[31m[90m 1 |[31m [33mScriptimport[31m { useEffect[33m,[31m useState } [36mfrom[31m [32m'react'[31m
+ [90m   |[31m             [31m[1m^[22m[31m
+ [90m 2 |[31m [36mimport[31m { useParams[33m,[31m [33mLink[31m } [36mfrom[31m [32m'react-router-dom'[31m
+ [90m 3 |[31m [36mimport[31m { [33mFiArrowLeft[31m[33m,[31m [33mFiClock[31m[33m,[31m [33mFiChevronRight[31m[33m,[31m [33mFiBookOpen[31m[33m,[31m [33mFiClipboard[31m } [36mfrom[31m [32m'react-icons/fi'[31m
+ [90m 4 |[31m [36mimport[31m { apiClient } [36mfrom[31m [32m'../../api/apiClient'[31m[0m[39m
+  Plugin: [35mvite:react-babel[39m
+  File: [36mE:/learning/Masai/capstone/frontend/src/pages/student/CourseDetail.jsx[39m:1:12
+[33m  1  |  Scriptimport { useEffect, useState } from 'react'
+     |              ^
+  2  |  import { useParams, Link } from 'react-router-dom'
+  3  |  import { FiArrowLeft, FiClock, FiChevronRight, FiBookOpen, FiClipboard } from 'react-icons/fi'[39m
+      at constructor (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:369:19)
+      at JSXParserMixin.raise (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:6620:19)
+      at JSXParserMixin.semicolon (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:6916:10)
+      at JSXParserMixin.parseExpressionStatement (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:13314:10)
+      at JSXParserMixin.parseStatementContent (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:12928:19)
+      at JSXParserMixin.parseStatementLike (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:12796:17)
+      at JSXParserMixin.parseModuleItem (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:12773:17)
+      at JSXParserMixin.parseBlockOrModuleBlockBody (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:13345:36)
+      at JSXParserMixin.parseBlockBody (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:13338:10)
+      at JSXParserMixin.parseProgram (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:12651:10)
+      at JSXParserMixin.parseTopLevel (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:12641:25)
+      at JSXParserMixin.parse (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:14517:25)
+      at parse (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:14551:38)
+      at parser (E:\learning\Masai\capstone\frontend\node_modules\@babel\core\lib\parser\index.js:41:34)
+      at parser.next (<anonymous>)
+      at normalizeFile (E:\learning\Masai\capstone\frontend\node_modules\@babel\core\lib\transformation\normalize-file.js:51:37)
+      at normalizeFile.next (<anonymous>)
+      at run (E:\learning\Masai\capstone\frontend\node_modules\@babel\core\lib\transformation\index.js:22:50)
+      at run.next (<anonymous>)
+      at transform (E:\learning\Masai\capstone\frontend\node_modules\@babel\core\lib\transform.js:22:33)
+      at transform.next (<anonymous>)
+      at step (E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:261:32)
+      at E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:273:13
+      at async.call.result.err.err (E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:223:11)
+      at E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:189:28
+      at E:\learning\Masai\capstone\frontend\node_modules\@babel\core\lib\gensync-utils\async.js:67:7
+      at E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:113:33
+      at step (E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:287:14)
+      at E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:273:13
+      at async.call.result.err.err (E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:223:11)
+[2m1:26:30 PM[22m [31m[1m[vite][22m[39m [31mInternal server error: E:\learning\Masai\capstone\frontend\src\pages\student\CourseDetail.jsx: Missing semicolon. (1:12)
+
+[0m[31m[1m>[22m[31m[90m 1 |[31m [33mScriptimport[31m { useEffect[33m,[31m useState } [36mfrom[31m [32m'react'[31m
+ [90m   |[31m             [31m[1m^[22m[31m
+ [90m 2 |[31m [36mimport[31m { useParams[33m,[31m [33mLink[31m } [36mfrom[31m [32m'react-router-dom'[31m
+ [90m 3 |[31m [36mimport[31m { [33mFiArrowLeft[31m[33m,[31m [33mFiClock[31m[33m,[31m [33mFiChevronRight[31m[33m,[31m [33mFiBookOpen[31m[33m,[31m [33mFiClipboard[31m } [36mfrom[31m [32m'react-icons/fi'[31m
+ [90m 4 |[31m [36mimport[31m { apiClient } [36mfrom[31m [32m'../../api/apiClient'[31m[0m[39m
+  Plugin: [35mvite:react-babel[39m
+  File: [36mE:/learning/Masai/capstone/frontend/src/pages/student/CourseDetail.jsx[39m:1:12
+[33m  1  |  Scriptimport { useEffect, useState } from 'react'
+     |              ^
+  2  |  import { useParams, Link } from 'react-router-dom'
+  3  |  import { FiArrowLeft, FiClock, FiChevronRight, FiBookOpen, FiClipboard } from 'react-icons/fi'[39m
+      at constructor (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:369:19)
+      at JSXParserMixin.raise (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:6620:19)
+      at JSXParserMixin.semicolon (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:6916:10)
+      at JSXParserMixin.parseExpressionStatement (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:13314:10)
+      at JSXParserMixin.parseStatementContent (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:12928:19)
+      at JSXParserMixin.parseStatementLike (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:12796:17)
+      at JSXParserMixin.parseModuleItem (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:12773:17)
+      at JSXParserMixin.parseBlockOrModuleBlockBody (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:13345:36)
+      at JSXParserMixin.parseBlockBody (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:13338:10)
+      at JSXParserMixin.parseProgram (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:12651:10)
+      at JSXParserMixin.parseTopLevel (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:12641:25)
+      at JSXParserMixin.parse (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:14517:25)
+      at parse (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:14551:38)
+      at parser (E:\learning\Masai\capstone\frontend\node_modules\@babel\core\lib\parser\index.js:41:34)
+      at parser.next (<anonymous>)
+      at normalizeFile (E:\learning\Masai\capstone\frontend\node_modules\@babel\core\lib\transformation\normalize-file.js:51:37)
+      at normalizeFile.next (<anonymous>)
+      at run (E:\learning\Masai\capstone\frontend\node_modules\@babel\core\lib\transformation\index.js:22:50)
+      at run.next (<anonymous>)
+      at transform (E:\learning\Masai\capstone\frontend\node_modules\@babel\core\lib\transform.js:22:33)
+      at transform.next (<anonymous>)
+      at step (E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:261:32)
+      at E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:273:13
+      at async.call.result.err.err (E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:223:11)
+      at E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:189:28
+      at E:\learning\Masai\capstone\frontend\node_modules\@babel\core\lib\gensync-utils\async.js:67:7
+      at E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:113:33
+      at step (E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:287:14)
+      at E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:273:13
+      at async.call.result.err.err (E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:223:11)
+[2m1:26:44 PM[22m [31m[1m[vite][22m[39m [31mInternal server error: E:\learning\Masai\capstone\frontend\src\pages\student\CourseDetail.jsx: Missing semicolon. (1:12)
+
+[0m[31m[1m>[22m[31m[90m 1 |[31m [33mScriptimport[31m { useEffect[33m,[31m useState } [36mfrom[31m [32m'react'[31m
+ [90m   |[31m             [31m[1m^[22m[31m
+ [90m 2 |[31m [36mimport[31m { useParams[33m,[31m [33mLink[31m } [36mfrom[31m [32m'react-router-dom'[31m
+ [90m 3 |[31m [36mimport[31m { [33mFiArrowLeft[31m[33m,[31m [33mFiClock[31m[33m,[31m [33mFiChevronRight[31m[33m,[31m [33mFiBookOpen[31m[33m,[31m [33mFiClipboard[31m } [36mfrom[31m [32m'react-icons/fi'[31m
+ [90m 4 |[31m [36mimport[31m { apiClient } [36mfrom[31m [32m'../../api/apiClient'[31m[0m[39m
+  Plugin: [35mvite:react-babel[39m
+  File: [36mE:/learning/Masai/capstone/frontend/src/pages/student/CourseDetail.jsx[39m:1:12
+[33m  1  |  Scriptimport { useEffect, useState } from 'react'
+     |              ^
+  2  |  import { useParams, Link } from 'react-router-dom'
+  3  |  import { FiArrowLeft, FiClock, FiChevronRight, FiBookOpen, FiClipboard } from 'react-icons/fi'[39m
+      at constructor (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:369:19)
+      at JSXParserMixin.raise (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:6620:19)
+      at JSXParserMixin.semicolon (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:6916:10)
+      at JSXParserMixin.parseExpressionStatement (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:13314:10)
+      at JSXParserMixin.parseStatementContent (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:12928:19)
+      at JSXParserMixin.parseStatementLike (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:12796:17)
+      at JSXParserMixin.parseModuleItem (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:12773:17)
+      at JSXParserMixin.parseBlockOrModuleBlockBody (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:13345:36)
+      at JSXParserMixin.parseBlockBody (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:13338:10)
+      at JSXParserMixin.parseProgram (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:12651:10)
+      at JSXParserMixin.parseTopLevel (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:12641:25)
+      at JSXParserMixin.parse (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:14517:25)
+      at parse (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:14551:38)
+      at parser (E:\learning\Masai\capstone\frontend\node_modules\@babel\core\lib\parser\index.js:41:34)
+      at parser.next (<anonymous>)
+      at normalizeFile (E:\learning\Masai\capstone\frontend\node_modules\@babel\core\lib\transformation\normalize-file.js:51:37)
+      at normalizeFile.next (<anonymous>)
+      at run (E:\learning\Masai\capstone\frontend\node_modules\@babel\core\lib\transformation\index.js:22:50)
+      at run.next (<anonymous>)
+      at transform (E:\learning\Masai\capstone\frontend\node_modules\@babel\core\lib\transform.js:22:33)
+      at transform.next (<anonymous>)
+      at step (E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:261:32)
+      at E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:273:13
+      at async.call.result.err.err (E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:223:11)
+      at E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:189:28
+      at E:\learning\Masai\capstone\frontend\node_modules\@babel\core\lib\gensync-utils\async.js:67:7
+      at E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:113:33
+      at step (E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:287:14)
+      at E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:273:13
+      at async.call.result.err.err (E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:223:11)
+[2m1:40:07 PM[22m [31m[1m[vite][22m[39m [31mInternal server error: E:\learning\Masai\capstone\frontend\src\pages\student\CourseDetail.jsx: Missing semicolon. (1:12)
+
+[0m[31m[1m>[22m[31m[90m 1 |[31m [33mScriptimport[31m { useEffect[33m,[31m useState } [36mfrom[31m [32m'react'[31m
+ [90m   |[31m             [31m[1m^[22m[31m
+ [90m 2 |[31m [36mimport[31m { useParams[33m,[31m [33mLink[31m } [36mfrom[31m [32m'react-router-dom'[31m
+ [90m 3 |[31m [36mimport[31m { [33mFiArrowLeft[31m[33m,[31m [33mFiClock[31m[33m,[31m [33mFiChevronRight[31m[33m,[31m [33mFiBookOpen[31m[33m,[31m [33mFiClipboard[31m } [36mfrom[31m [32m'react-icons/fi'[31m
+ [90m 4 |[31m [36mimport[31m { apiClient } [36mfrom[31m [32m'../../api/apiClient'[31m[0m[39m
+  Plugin: [35mvite:react-babel[39m
+  File: [36mE:/learning/Masai/capstone/frontend/src/pages/student/CourseDetail.jsx[39m:1:12
+[33m  1  |  Scriptimport { useEffect, useState } from 'react'
+     |              ^
+  2  |  import { useParams, Link } from 'react-router-dom'
+  3  |  import { FiArrowLeft, FiClock, FiChevronRight, FiBookOpen, FiClipboard } from 'react-icons/fi'[39m
+      at constructor (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:369:19)
+      at JSXParserMixin.raise (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:6620:19)
+      at JSXParserMixin.semicolon (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:6916:10)
+      at JSXParserMixin.parseExpressionStatement (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:13314:10)
+      at JSXParserMixin.parseStatementContent (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:12928:19)
+      at JSXParserMixin.parseStatementLike (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:12796:17)
+      at JSXParserMixin.parseModuleItem (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:12773:17)
+      at JSXParserMixin.parseBlockOrModuleBlockBody (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:13345:36)
+      at JSXParserMixin.parseBlockBody (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:13338:10)
+      at JSXParserMixin.parseProgram (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:12651:10)
+      at JSXParserMixin.parseTopLevel (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:12641:25)
+      at JSXParserMixin.parse (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:14517:25)
+      at parse (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:14551:38)
+      at parser (E:\learning\Masai\capstone\frontend\node_modules\@babel\core\lib\parser\index.js:41:34)
+      at parser.next (<anonymous>)
+      at normalizeFile (E:\learning\Masai\capstone\frontend\node_modules\@babel\core\lib\transformation\normalize-file.js:51:37)
+      at normalizeFile.next (<anonymous>)
+      at run (E:\learning\Masai\capstone\frontend\node_modules\@babel\core\lib\transformation\index.js:22:50)
+      at run.next (<anonymous>)
+      at transform (E:\learning\Masai\capstone\frontend\node_modules\@babel\core\lib\transform.js:22:33)
+      at transform.next (<anonymous>)
+      at step (E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:261:32)
+      at E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:273:13
+      at async.call.result.err.err (E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:223:11)
+      at E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:189:28
+      at E:\learning\Masai\capstone\frontend\node_modules\@babel\core\lib\gensync-utils\async.js:67:7
+      at E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:113:33
+      at step (E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:287:14)
+      at E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:273:13
+      at async.call.result.err.err (E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:223:11)
+[2m1:40:10 PM[22m [31m[1m[vite][22m[39m [31mInternal server error: E:\learning\Masai\capstone\frontend\src\pages\student\CourseDetail.jsx: Missing semicolon. (1:12)
+
+[0m[31m[1m>[22m[31m[90m 1 |[31m [33mScriptimport[31m { useEffect[33m,[31m useState } [36mfrom[31m [32m'react'[31m
+ [90m   |[31m             [31m[1m^[22m[31m
+ [90m 2 |[31m [36mimport[31m { useParams[33m,[31m [33mLink[31m } [36mfrom[31m [32m'react-router-dom'[31m
+ [90m 3 |[31m [36mimport[31m { [33mFiArrowLeft[31m[33m,[31m [33mFiClock[31m[33m,[31m [33mFiChevronRight[31m[33m,[31m [33mFiBookOpen[31m[33m,[31m [33mFiClipboard[31m } [36mfrom[31m [32m'react-icons/fi'[31m
+ [90m 4 |[31m [36mimport[31m { apiClient } [36mfrom[31m [32m'../../api/apiClient'[31m[0m[39m
+  Plugin: [35mvite:react-babel[39m
+  File: [36mE:/learning/Masai/capstone/frontend/src/pages/student/CourseDetail.jsx[39m:1:12
+[33m  1  |  Scriptimport { useEffect, useState } from 'react'
+     |              ^
+  2  |  import { useParams, Link } from 'react-router-dom'
+  3  |  import { FiArrowLeft, FiClock, FiChevronRight, FiBookOpen, FiClipboard } from 'react-icons/fi'[39m
+      at constructor (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:369:19)
+      at JSXParserMixin.raise (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:6620:19)
+      at JSXParserMixin.semicolon (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:6916:10)
+      at JSXParserMixin.parseExpressionStatement (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:13314:10)
+      at JSXParserMixin.parseStatementContent (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:12928:19)
+      at JSXParserMixin.parseStatementLike (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:12796:17)
+      at JSXParserMixin.parseModuleItem (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:12773:17)
+      at JSXParserMixin.parseBlockOrModuleBlockBody (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:13345:36)
+      at JSXParserMixin.parseBlockBody (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:13338:10)
+      at JSXParserMixin.parseProgram (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:12651:10)
+      at JSXParserMixin.parseTopLevel (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:12641:25)
+      at JSXParserMixin.parse (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:14517:25)
+      at parse (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:14551:38)
+      at parser (E:\learning\Masai\capstone\frontend\node_modules\@babel\core\lib\parser\index.js:41:34)
+      at parser.next (<anonymous>)
+      at normalizeFile (E:\learning\Masai\capstone\frontend\node_modules\@babel\core\lib\transformation\normalize-file.js:51:37)
+      at normalizeFile.next (<anonymous>)
+      at run (E:\learning\Masai\capstone\frontend\node_modules\@babel\core\lib\transformation\index.js:22:50)
+      at run.next (<anonymous>)
+      at transform (E:\learning\Masai\capstone\frontend\node_modules\@babel\core\lib\transform.js:22:33)
+      at transform.next (<anonymous>)
+      at step (E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:261:32)
+      at E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:273:13
+      at async.call.result.err.err (E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:223:11)
+      at E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:189:28
+      at E:\learning\Masai\capstone\frontend\node_modules\@babel\core\lib\gensync-utils\async.js:67:7
+      at E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:113:33
+      at step (E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:287:14)
+      at E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:273:13
+      at async.call.result.err.err (E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:223:11)
+[2m1:40:11 PM[22m [31m[1m[vite][22m[39m [31mInternal server error: E:\learning\Masai\capstone\frontend\src\pages\student\CourseDetail.jsx: Missing semicolon. (1:12)
+
+[0m[31m[1m>[22m[31m[90m 1 |[31m [33mScriptimport[31m { useEffect[33m,[31m useState } [36mfrom[31m [32m'react'[31m
+ [90m   |[31m             [31m[1m^[22m[31m
+ [90m 2 |[31m [36mimport[31m { useParams[33m,[31m [33mLink[31m } [36mfrom[31m [32m'react-router-dom'[31m
+ [90m 3 |[31m [36mimport[31m { [33mFiArrowLeft[31m[33m,[31m [33mFiClock[31m[33m,[31m [33mFiChevronRight[31m[33m,[31m [33mFiBookOpen[31m[33m,[31m [33mFiClipboard[31m } [36mfrom[31m [32m'react-icons/fi'[31m
+ [90m 4 |[31m [36mimport[31m { apiClient } [36mfrom[31m [32m'../../api/apiClient'[31m[0m[39m
+  Plugin: [35mvite:react-babel[39m
+  File: [36mE:/learning/Masai/capstone/frontend/src/pages/student/CourseDetail.jsx[39m:1:12
+[33m  1  |  Scriptimport { useEffect, useState } from 'react'
+     |              ^
+  2  |  import { useParams, Link } from 'react-router-dom'
+  3  |  import { FiArrowLeft, FiClock, FiChevronRight, FiBookOpen, FiClipboard } from 'react-icons/fi'[39m
+      at constructor (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:369:19)
+      at JSXParserMixin.raise (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:6620:19)
+      at JSXParserMixin.semicolon (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:6916:10)
+      at JSXParserMixin.parseExpressionStatement (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:13314:10)
+      at JSXParserMixin.parseStatementContent (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:12928:19)
+      at JSXParserMixin.parseStatementLike (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:12796:17)
+      at JSXParserMixin.parseModuleItem (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:12773:17)
+      at JSXParserMixin.parseBlockOrModuleBlockBody (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:13345:36)
+      at JSXParserMixin.parseBlockBody (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:13338:10)
+      at JSXParserMixin.parseProgram (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:12651:10)
+      at JSXParserMixin.parseTopLevel (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:12641:25)
+      at JSXParserMixin.parse (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:14517:25)
+      at parse (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:14551:38)
+      at parser (E:\learning\Masai\capstone\frontend\node_modules\@babel\core\lib\parser\index.js:41:34)
+      at parser.next (<anonymous>)
+      at normalizeFile (E:\learning\Masai\capstone\frontend\node_modules\@babel\core\lib\transformation\normalize-file.js:51:37)
+      at normalizeFile.next (<anonymous>)
+      at run (E:\learning\Masai\capstone\frontend\node_modules\@babel\core\lib\transformation\index.js:22:50)
+      at run.next (<anonymous>)
+      at transform (E:\learning\Masai\capstone\frontend\node_modules\@babel\core\lib\transform.js:22:33)
+      at transform.next (<anonymous>)
+      at step (E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:261:32)
+      at E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:273:13
+      at async.call.result.err.err (E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:223:11)
+      at E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:189:28
+      at E:\learning\Masai\capstone\frontend\node_modules\@babel\core\lib\gensync-utils\async.js:67:7
+      at E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:113:33
+      at step (E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:287:14)
+      at E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:273:13
+      at async.call.result.err.err (E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:223:11)
+[2m1:41:04 PM[22m [31m[1m[vite][22m[39m [31mInternal server error: E:\learning\Masai\capstone\frontend\src\pages\student\CourseDetail.jsx: Missing semicolon. (1:12)
+
+[0m[31m[1m>[22m[31m[90m 1 |[31m [33mScriptimport[31m { useEffect[33m,[31m useState } [36mfrom[31m [32m'react'[31m
+ [90m   |[31m             [31m[1m^[22m[31m
+ [90m 2 |[31m [36mimport[31m { useParams[33m,[31m [33mLink[31m } [36mfrom[31m [32m'react-router-dom'[31m
+ [90m 3 |[31m [36mimport[31m { [33mFiArrowLeft[31m[33m,[31m [33mFiClock[31m[33m,[31m [33mFiChevronRight[31m[33m,[31m [33mFiBookOpen[31m[33m,[31m [33mFiClipboard[31m } [36mfrom[31m [32m'react-icons/fi'[31m
+ [90m 4 |[31m [36mimport[31m { apiClient } [36mfrom[31m [32m'../../api/apiClient'[31m[0m[39m
+  Plugin: [35mvite:react-babel[39m
+  File: [36mE:/learning/Masai/capstone/frontend/src/pages/student/CourseDetail.jsx[39m:1:12
+[33m  1  |  Scriptimport { useEffect, useState } from 'react'
+     |              ^
+  2  |  import { useParams, Link } from 'react-router-dom'
+  3  |  import { FiArrowLeft, FiClock, FiChevronRight, FiBookOpen, FiClipboard } from 'react-icons/fi'[39m
+      at constructor (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:369:19)
+      at JSXParserMixin.raise (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:6620:19)
+      at JSXParserMixin.semicolon (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:6916:10)
+      at JSXParserMixin.parseExpressionStatement (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:13314:10)
+      at JSXParserMixin.parseStatementContent (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:12928:19)
+      at JSXParserMixin.parseStatementLike (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:12796:17)
+      at JSXParserMixin.parseModuleItem (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:12773:17)
+      at JSXParserMixin.parseBlockOrModuleBlockBody (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:13345:36)
+      at JSXParserMixin.parseBlockBody (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:13338:10)
+      at JSXParserMixin.parseProgram (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:12651:10)
+      at JSXParserMixin.parseTopLevel (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:12641:25)
+      at JSXParserMixin.parse (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:14517:25)
+      at parse (E:\learning\Masai\capstone\frontend\node_modules\@babel\parser\lib\index.js:14551:38)
+      at parser (E:\learning\Masai\capstone\frontend\node_modules\@babel\core\lib\parser\index.js:41:34)
+      at parser.next (<anonymous>)
+      at normalizeFile (E:\learning\Masai\capstone\frontend\node_modules\@babel\core\lib\transformation\normalize-file.js:51:37)
+      at normalizeFile.next (<anonymous>)
+      at run (E:\learning\Masai\capstone\frontend\node_modules\@babel\core\lib\transformation\index.js:22:50)
+      at run.next (<anonymous>)
+      at transform (E:\learning\Masai\capstone\frontend\node_modules\@babel\core\lib\transform.js:22:33)
+      at transform.next (<anonymous>)
+      at step (E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:261:32)
+      at E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:273:13
+      at async.call.result.err.err (E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:223:11)
+      at E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:189:28
+      at E:\learning\Masai\capstone\frontend\node_modules\@babel\core\lib\gensync-utils\async.js:67:7
+      at E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:113:33
+      at step (E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:287:14)
+      at E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:273:13
+      at async.call.result.err.err (E:\learning\Masai\capstone\frontend\node_modules\gensync\index.js:223:11)
+[2m4:35:51 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles/index.css, /src/routes/AppRoutes.jsx[22m
+[2m4:35:51 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles/index.css, /src/routes/AppRoutes.jsx[22m

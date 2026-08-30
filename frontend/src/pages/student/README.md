@@ -1,0 +1,3 @@
+# student
+
+Student pages.

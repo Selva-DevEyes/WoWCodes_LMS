@@ -1,0 +1,3 @@
+# quizLevels
+
+Constants: quizLevels.

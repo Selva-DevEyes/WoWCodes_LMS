@@ -1,0 +1,4076 @@
+capstone/
+|-- backend
+|   |-- app
+|   |   |-- api
+|   |   |   |-- admin
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- auth
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- bookmarks
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- certificates
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- courses
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- instructor
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- leaderboard
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- lessons
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- notes
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- notifications
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- progress
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- questions
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- quiz
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- results
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- search
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- topics
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- users
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- README.md
+|   |   |   `-- __init__.py
+|   |   |-- auth
+|   |   |   |-- jwtAuth
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- oauth
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- README.md
+|   |   |   `-- __init__.py
+|   |   |-- core
+|   |   |   |-- config
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- logging
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- security
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- README.md
+|   |   |   `-- __init__.py
+|   |   |-- crud
+|   |   |   |-- bookmark
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- certificate
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- course
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- lesson
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- note
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- notification
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- progress
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- question
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- quiz
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- result
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- role
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- topic
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- user
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- README.md
+|   |   |   `-- __init__.py
+|   |   |-- database
+|   |   |   |-- base
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- init
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- session
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- README.md
+|   |   |   `-- __init__.py
+|   |   |-- dependencies
+|   |   |   |-- auth
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- database
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- roles
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- README.md
+|   |   |   `-- __init__.py
+|   |   |-- middleware
+|   |   |   |-- cors
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- errorHandler
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- requestLogging
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- README.md
+|   |   |   `-- __init__.py
+|   |   |-- migrations
+|   |   |   |-- versions
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- README.md
+|   |   |   `-- __init__.py
+|   |   |-- models
+|   |   |   |-- answer
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- bookmark
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- certificate
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- course
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- lesson
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- note
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- notification
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- option
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- progress
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- question
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- quiz
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- result
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- role
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- topic
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- user
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- README.md
+|   |   |   `-- __init__.py
+|   |   |-- repositories
+|   |   |   |-- bookmark
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- certificate
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- course
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- lesson
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- notification
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- progress
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- quiz
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- topic
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- user
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- README.md
+|   |   |   `-- __init__.py
+|   |   |-- schemas
+|   |   |   |-- auth
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- bookmark
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- certificate
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- common
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- course
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- lesson
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- note
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- notification
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- progress
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- question
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- quiz
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- result
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- topic
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- user
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- README.md
+|   |   |   `-- __init__.py
+|   |   |-- security
+|   |   |   |-- jwt
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- passwordHashing
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- README.md
+|   |   |   `-- __init__.py
+|   |   |-- seed
+|   |   |   |-- README.md
+|   |   |   `-- __init__.py
+|   |   |-- services
+|   |   |   |-- auth
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- bookmark
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- certificate
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- course
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- leaderboard
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- lesson
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- note
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- notification
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- progress
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- quiz
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- result
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- search
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- topic
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- user
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- README.md
+|   |   |   `-- __init__.py
+|   |   |-- tests
+|   |   |   |-- conftest
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- integration
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- unit
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- README.md
+|   |   |   `-- __init__.py
+|   |   |-- utils
+|   |   |   |-- constants
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- helpers
+|   |   |   |   |-- README.md
+|   |   |   |   `-- __init__.py
+|   |   |   |-- README.md
+|   |   |   `-- __init__.py
+|   |   |-- README.md
+|   |   |-- __init__.py
+|   |   `-- main.py
+|   |-- .env.example
+|   |-- .gitignore
+|   |-- Dockerfile
+|   |-- README.md
+|   |-- alembic.ini
+|   |-- pyproject.toml
+|   |-- pytest.ini
+|   `-- requirements.txt
+|-- frontend
+|   |-- public
+|   |   |-- fonts
+|   |   |-- icons
+|   |   |-- images
+|   |   |-- README.md
+|   |   `-- favicon.ico
+|   |-- src
+|   |   |-- api
+|   |   |   |-- axiosInstance
+|   |   |   |   `-- README.md
+|   |   |   |-- endpoints
+|   |   |   |   `-- README.md
+|   |   |   |-- interceptors
+|   |   |   |   `-- README.md
+|   |   |   `-- README.md
+|   |   |-- assets
+|   |   |   |-- fonts
+|   |   |   |-- icons
+|   |   |   |-- images
+|   |   |   `-- README.md
+|   |   |-- components
+|   |   |   |-- auth
+|   |   |   |   `-- README.md
+|   |   |   |-- common
+|   |   |   |   `-- README.md
+|   |   |   |-- dashboard
+|   |   |   |   `-- README.md
+|   |   |   |-- layout
+|   |   |   |   `-- README.md
+|   |   |   |-- notifications
+|   |   |   |   `-- README.md
+|   |   |   |-- progress
+|   |   |   |   `-- README.md
+|   |   |   |-- quiz
+|   |   |   |   `-- README.md
+|   |   |   |-- search
+|   |   |   |   `-- README.md
+|   |   |   |-- theme
+|   |   |   |   `-- README.md
+|   |   |   |-- ui
+|   |   |   |   `-- README.md
+|   |   |   `-- README.md
+|   |   |-- config
+|   |   |   |-- apiConfig
+|   |   |   |   `-- README.md
+|   |   |   |-- appConfig
+|   |   |   |   `-- README.md
+|   |   |   |-- featureFlags
+|   |   |   |   `-- README.md
+|   |   |   `-- README.md
+|   |   |-- constants
+|   |   |   |-- quizLevels
+|   |   |   |   `-- README.md
+|   |   |   |-- roles
+|   |   |   |   `-- README.md
+|   |   |   |-- routes
+|   |   |   |   `-- README.md
+|   |   |   |-- themes
+|   |   |   |   `-- README.md
+|   |   |   |-- topics
+|   |   |   |   `-- README.md
+|   |   |   `-- README.md
+|   |   |-- content
+|   |   |   |-- advanced-sql
+|   |   |   |   |-- aggregate-functions
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- group-by
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- having
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- indexes
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- joins
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- normalization
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- quiz
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- stored-procedures
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- transactions
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- views
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   `-- README.md
+|   |   |   |-- ai
+|   |   |   |   |-- ai-agents
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- deep-learning
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- embeddings
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- function-calling
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- interview-questions
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- large-language-models
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- machine-learning
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- mcp
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- projects
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- prompt-engineering
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- quiz
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- rag
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- small-language-models
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- vector-database
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   `-- README.md
+|   |   |   |-- css
+|   |   |   |   |-- animations
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- box-model
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- flexbox
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- grid
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- introduction
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- projects
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- quiz
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- responsive
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- selectors
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   `-- README.md
+|   |   |   |-- database-fundamentals
+|   |   |   |   |-- acid
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- constraints
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- er-diagram
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- foreign-key
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- indexes
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- primary-key
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- quiz
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- relationships
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   `-- README.md
+|   |   |   |-- fastapi
+|   |   |   |   |-- authentication
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- authorization
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- background-tasks
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- dependency-injection
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- exception-handling
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- jwt
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- middleware
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- path-parameters
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- projects
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- query-parameters
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- quiz
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- request
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- response
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- routing
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   `-- README.md
+|   |   |   |-- git-github
+|   |   |   |   |-- branch
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- cherry-pick
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- clone
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- commit
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- conflict-resolution
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- fetch
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- fork
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- git-ignore
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- git-installation
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- github-actions
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- interview-questions
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- merge
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- practical-examples
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- pull
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- pull-request
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- push
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- quiz
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- real-time-problems
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- rebase
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- recover-branch
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- recover-commit
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- recover-deleted-files
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- remote
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- repository
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- reset
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- revert
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- stash
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   `-- README.md
+|   |   |   |-- html
+|   |   |   |   |-- accessibility
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- forms
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- introduction
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- media
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- projects
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- quiz
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- semantic-html
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- seo
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- structure
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- tags
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   `-- README.md
+|   |   |   |-- javascript
+|   |   |   |   |-- arrays
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- async-await
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- dom
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- dom-manipulation
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- error-handling
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- es6plus
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- event-handling
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- fetch-api
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- functions
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- http-protocol
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- interactive-dom
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- introduction
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- local-storage
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- modules
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- objects
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- operators
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- projects
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- promises
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- quiz
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- session-storage
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- variables
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   `-- README.md
+|   |   |   |-- nodejs
+|   |   |   |   |-- authentication
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- express
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- introduction
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- modules
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- npm
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- projects
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- quiz
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- rest-api
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   `-- README.md
+|   |   |   |-- pydantic
+|   |   |   |   |-- custom-validators
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- models
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- nested-models
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- projects
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- quiz
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- response-models
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- validation
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   `-- README.md
+|   |   |   |-- python
+|   |   |   |   |-- data-types
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- dictionary
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- exception-handling
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- file-handling
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- functions
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- hashmap
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- lambda
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- lists
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- modules
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- oop
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- operators
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- packages
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- projects
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- quiz
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- recursion
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- searching-algorithms
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- set
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- sorting-algorithms
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- strings
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- tuple
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- variables
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   `-- README.md
+|   |   |   |-- react
+|   |   |   |   |-- api-integration
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- components
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- context-api
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- forms
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- hooks
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- introduction
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- jsx
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- lifecycle
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- performance
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- projects
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- props
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- quiz
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- routing
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- state
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   `-- README.md
+|   |   |   |-- redux
+|   |   |   |   |-- actions
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- async-thunk
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- middleware
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- projects
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- quiz
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- reducers
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- redux-toolkit
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- store
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   `-- README.md
+|   |   |   |-- sqlalchemy
+|   |   |   |   |-- crud
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- models
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- orm
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- projects
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- quiz
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- relationships
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- sessions
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   `-- README.md
+|   |   |   |-- sqlite
+|   |   |   |   |-- crud
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- database
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- indexes
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- quiz
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- relationships
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- tables
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   `-- README.md
+|   |   |   |-- supabase
+|   |   |   |   |-- authentication
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- database
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- projects
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- quiz
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- realtime
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- storage
+|   |   |   |   |   |-- assignments
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- examples
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- interview-questions
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- mini-projects
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- notes
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- practice
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- quiz
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   |-- resources
+|   |   |   |   |   |   `-- README.md
+|   |   |   |   |   `-- README.md
+|   |   |   |   `-- README.md
+|   |   |   `-- README.md
+|   |   |-- contexts
+|   |   |   |-- AuthContext
+|   |   |   |   `-- README.md
+|   |   |   |-- NotificationContext
+|   |   |   |   `-- README.md
+|   |   |   |-- ThemeContext
+|   |   |   |   `-- README.md
+|   |   |   `-- README.md
+|   |   |-- features
+|   |   |   |-- auth
+|   |   |   |   `-- README.md
+|   |   |   |-- certificates
+|   |   |   |   `-- README.md
+|   |   |   |-- dashboard
+|   |   |   |   `-- README.md
+|   |   |   |-- leaderboard
+|   |   |   |   `-- README.md
+|   |   |   |-- learning
+|   |   |   |   `-- README.md
+|   |   |   |-- notifications
+|   |   |   |   `-- README.md
+|   |   |   |-- profile
+|   |   |   |   `-- README.md
+|   |   |   |-- quiz
+|   |   |   |   `-- README.md
+|   |   |   |-- search
+|   |   |   |   `-- README.md
+|   |   |   |-- settings
+|   |   |   |   `-- README.md
+|   |   |   `-- README.md
+|   |   |-- hooks
+|   |   |   |-- useAuth
+|   |   |   |   `-- README.md
+|   |   |   |-- useDebounce
+|   |   |   |   `-- README.md
+|   |   |   |-- useLocalStorage
+|   |   |   |   `-- README.md
+|   |   |   |-- useNotifications
+|   |   |   |   `-- README.md
+|   |   |   |-- usePagination
+|   |   |   |   `-- README.md
+|   |   |   |-- useProgress
+|   |   |   |   `-- README.md
+|   |   |   |-- useQuiz
+|   |   |   |   `-- README.md
+|   |   |   |-- useSearch
+|   |   |   |   `-- README.md
+|   |   |   |-- useTheme
+|   |   |   |   `-- README.md
+|   |   |   `-- README.md
+|   |   |-- layouts
+|   |   |   |-- AdminLayout
+|   |   |   |   `-- README.md
+|   |   |   |-- AuthLayout
+|   |   |   |   `-- README.md
+|   |   |   |-- DashboardLayout
+|   |   |   |   `-- README.md
+|   |   |   |-- InstructorLayout
+|   |   |   |   `-- README.md
+|   |   |   |-- MainLayout
+|   |   |   |   `-- README.md
+|   |   |   `-- README.md
+|   |   |-- pages
+|   |   |   |-- admin
+|   |   |   |   `-- README.md
+|   |   |   |-- auth
+|   |   |   |   `-- README.md
+|   |   |   |-- error
+|   |   |   |   `-- README.md
+|   |   |   |-- instructor
+|   |   |   |   `-- README.md
+|   |   |   |-- public
+|   |   |   |   `-- README.md
+|   |   |   |-- student
+|   |   |   |   `-- README.md
+|   |   |   `-- README.md
+|   |   |-- redux
+|   |   |   |-- slices
+|   |   |   |   |-- auth
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- bookmarks
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- certificates
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- courses
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- leaderboard
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- notes
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- notifications
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- progress
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- quiz
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- search
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- theme
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- topics
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- user
+|   |   |   |   |   `-- README.md
+|   |   |   |   `-- README.md
+|   |   |   |-- store
+|   |   |   |   `-- README.md
+|   |   |   `-- README.md
+|   |   |-- routes
+|   |   |   |-- AppRoutes
+|   |   |   |   `-- README.md
+|   |   |   |-- ProtectedRoute
+|   |   |   |   `-- README.md
+|   |   |   |-- PublicRoute
+|   |   |   |   `-- README.md
+|   |   |   |-- RoleRoute
+|   |   |   |   `-- README.md
+|   |   |   `-- README.md
+|   |   |-- services
+|   |   |   |-- apiClient
+|   |   |   |   `-- README.md
+|   |   |   |-- auth
+|   |   |   |   `-- README.md
+|   |   |   |-- bookmarks
+|   |   |   |   `-- README.md
+|   |   |   |-- certificates
+|   |   |   |   `-- README.md
+|   |   |   |-- courses
+|   |   |   |   `-- README.md
+|   |   |   |-- leaderboard
+|   |   |   |   `-- README.md
+|   |   |   |-- notes
+|   |   |   |   `-- README.md
+|   |   |   |-- notifications
+|   |   |   |   `-- README.md
+|   |   |   |-- progress
+|   |   |   |   `-- README.md
+|   |   |   |-- quiz
+|   |   |   |   `-- README.md
+|   |   |   |-- search
+|   |   |   |   `-- README.md
+|   |   |   |-- topics
+|   |   |   |   `-- README.md
+|   |   |   `-- README.md
+|   |   |-- styles
+|   |   |   |-- components
+|   |   |   |   `-- README.md
+|   |   |   |-- global
+|   |   |   |   `-- README.md
+|   |   |   |-- tailwind
+|   |   |   |   `-- README.md
+|   |   |   `-- README.md
+|   |   |-- types
+|   |   |   `-- README.md
+|   |   |-- utils
+|   |   |   |-- constants
+|   |   |   |   `-- README.md
+|   |   |   |-- formatters
+|   |   |   |   `-- README.md
+|   |   |   |-- helpers
+|   |   |   |   `-- README.md
+|   |   |   |-- validators
+|   |   |   |   `-- README.md
+|   |   |   `-- README.md
+|   |   |-- App.jsx
+|   |   |-- README.md
+|   |   `-- main.jsx
+|   |-- .env.example
+|   |-- .gitignore
+|   |-- README.md
+|   |-- eslint.config.js
+|   |-- index.html
+|   |-- package.json
+|   |-- postcss.config.js
+|   |-- tailwind.config.js
+|   `-- vite.config.js
+|-- .env.example
+|-- .gitignore
+|-- LICENSE
+|-- Leraning dashboard details for build app.txt
+|-- README.md
+|-- docker-compose.yml
+|-- generate_structure.py
+|-- generate_tree.py
+`-- project_structure.txt

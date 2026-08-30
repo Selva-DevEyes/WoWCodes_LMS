@@ -1,0 +1,3 @@
+# dashboard
+
+Dashboard feature module.

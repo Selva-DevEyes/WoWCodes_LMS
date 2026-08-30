@@ -1,0 +1,36 @@
+# Dependencies
+node_modules/
+.venv/
+env/
+venv/
+
+# Build artifacts
+dist/
+build/
+*.egg-info/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+coverage/
+.coverage
+
+# Environment & Secrets
+.env
+.env.local
+.env.*.local
+
+# Local SQLite databases & uploads
+*.db
+*.sqlite3
+backend/wowcodes.db
+backend/uploads/
+uploads/
+
+# IDE / System files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,3 @@
+# fastapi
+
+Fastapi learning path.

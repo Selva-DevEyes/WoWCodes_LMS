@@ -1,0 +1,3 @@
+# store
+
+Redux store configuration.

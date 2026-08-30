@@ -1,0 +1,3 @@
+# resources
+
+Resources for MCP.

@@ -1,0 +1,1 @@
+"""WoWCodes FastAPI application package."""

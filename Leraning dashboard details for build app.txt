@@ -1,0 +1,58 @@
+/**JavaScript**/
+
+Variables
+Data types
+Operators
+Arrays
+Objects
+Loops
+Functions
+Arrow functions
+Scope
+Hoisting
+Closures
+Callbacks
+Promises
+async/await
+ES6 features
+Modules
+Error handling
+
+
+/**Node.js Basics**/
+
+What Node.js is
+Installing Node.js
+REPL
+npm
+package.json
+package-lock.json
+CommonJS (require)
+ES Modules (import/export)
+Global objects
+Process object
+Environment variables
+Event Loop (high priority)
+Event Emitter
+
+
+/**Express.js**/
+Creating a server
+Routing
+Request and response objects
+Middleware
+Error middleware
+Static files
+REST API
+CRUD operations
+MVC pattern
+
+
+/**Database**/
+PostgreSQL
+MySQL
+MongoDB
+SQL basics
+ORM (Prisma or Sequelize)
+
+

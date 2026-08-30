@@ -1,0 +1,3 @@
+# courses
+
+Courses slice.
