@@ -1,4 +1,51 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <rect width="100" height="100" rx="20" fill="#2563eb"/>
-  <text x="50" y="65" font-size="45" text-anchor="middle" fill="white" font-weight="bold">W</text>
+<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="fav-rainbow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f43f5e"/>
+      <stop offset="25%" stop-color="#fbbf24"/>
+      <stop offset="50%" stop-color="#10b981"/>
+      <stop offset="75%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <linearGradient id="fav-ear-left" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f43f5e"/>
+      <stop offset="100%" stop-color="#fbbf24"/>
+    </linearGradient>
+    <linearGradient id="fav-ear-right" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Outer Rainbow Badge Frame -->
+  <rect width="100" height="100" rx="24" fill="url(#fav-rainbow)"/>
+  <rect x="4" y="4" width="92" height="92" rx="20" fill="#0f172a"/>
+
+  <!-- Panda Ears -->
+  <circle cx="28" cy="28" r="14" fill="#0f172a" stroke="url(#fav-ear-left)" stroke-width="3"/>
+  <circle cx="72" cy="28" r="14" fill="#0f172a" stroke="url(#fav-ear-right)" stroke-width="3"/>
+  <circle cx="28" cy="28" r="7" fill="url(#fav-ear-left)"/>
+  <circle cx="72" cy="28" r="7" fill="url(#fav-ear-right)"/>
+
+  <!-- Panda Head -->
+  <circle cx="50" cy="56" r="34" fill="#ffffff" stroke="#0f172a" stroke-width="4"/>
+
+  <!-- Eye Patches -->
+  <ellipse cx="35" cy="52" rx="9" ry="12" transform="rotate(-15 35 52)" fill="#0f172a"/>
+  <ellipse cx="65" cy="52" rx="9" ry="12" transform="rotate(15 65 52)" fill="#0f172a"/>
+
+  <!-- Rainbow Developer Glasses -->
+  <rect x="23" y="43" width="22" height="16" rx="5" fill="none" stroke="url(#fav-rainbow)" stroke-width="3.5"/>
+  <rect x="55" y="43" width="22" height="16" rx="5" fill="none" stroke="url(#fav-rainbow)" stroke-width="3.5"/>
+  <path d="M45 51 H55" stroke="url(#fav-rainbow)" stroke-width="3.5" stroke-linecap="round"/>
+
+  <!-- Sparkle Pupil Eyes -->
+  <circle cx="36" cy="51" r="3" fill="#38bdf8"/>
+  <circle cx="34" cy="49" r="1.2" fill="#ffffff"/>
+  <circle cx="64" cy="51" r="3" fill="#38bdf8"/>
+  <circle cx="62" cy="49" r="1.2" fill="#ffffff"/>
+
+  <!-- Panda Cute Nose & Mouth -->
+  <ellipse cx="50" cy="67" rx="4.5" ry="3" fill="#0f172a"/>
+  <path d="M46 72 Q50 76 54 72" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round"/>
 </svg>

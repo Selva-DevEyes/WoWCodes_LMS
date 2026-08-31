@@ -15,7 +15,7 @@ const Logo = ({ size = 'md', showSubtitle = true, className = '' }) => {
 
   return (
     <div className={`flex items-center gap-3 select-none ${className}`}>
-      {/* Cute Coder Panda Mascot in Rainbow Badge */}
+      {/* Cute Coder Panda Mascot in Consistent Rainbow Gradient Badge */}
       <div className={`relative flex items-center justify-center shrink-0 rounded-2xl bg-gradient-to-tr from-rose-500 via-amber-400 via-emerald-400 via-sky-400 to-violet-600 p-[2px] shadow-sm hover:scale-105 transition-transform duration-300 ${pandaSizes[size]}`}>
         <div className="w-full h-full bg-white dark:bg-slate-950 rounded-[14px] flex items-center justify-center p-1 overflow-hidden">
           <svg viewBox="0 0 100 100" className="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -70,16 +70,16 @@ const Logo = ({ size = 'md', showSubtitle = true, className = '' }) => {
         </div>
       </div>
 
-      {/* Brand Name with Rainbow Gradient Text */}
+      {/* Brand Name with Consistent Rainbow Gradient Text */}
       <div className="flex flex-col">
         <span className={`font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-rose-500 via-amber-500 via-emerald-500 via-sky-500 to-indigo-600 ${sizeClasses[size]}`}>
-          WoWCodes
+          WOWCode
         </span>
         {showSubtitle && (
           <div className="flex items-center gap-1.5 -mt-0.5">
             <span className="inline-block w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
             <span className="text-[10px] font-semibold tracking-wider uppercase text-slate-500 dark:text-slate-400 font-mono">
-              Academy LMS
+              Learn. Practice. Grow.
             </span>
           </div>
         )}

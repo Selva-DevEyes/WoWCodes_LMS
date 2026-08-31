@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { toggleTheme } from '../../redux/slices/themeSlice'
 import { apiClient } from '../../api/apiClient'
 import { ENDPOINTS } from '../../api/endpoints'
+import Logo from './Logo'
 
 const Navbar = ({ onOpenSidebar }) => {
   const dispatch = useDispatch()
@@ -48,15 +49,18 @@ const Navbar = ({ onOpenSidebar }) => {
   return (
     <header className="sticky top-0 z-30 border-b border-slate-200/80 bg-white/95 shadow-sm backdrop-blur dark:border-slate-800 dark:bg-slate-900/95">
       <div className="flex items-center justify-between gap-3 px-4 py-3 lg:px-8">
-        <button
-          type="button"
-          aria-label="Open navigation menu"
-          aria-controls="mobile-sidebar"
-          onClick={onOpenSidebar}
-          className="shrink-0 rounded-xl p-2 text-slate-600 transition hover:bg-slate-100 hover:text-slate-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:text-slate-300 dark:hover:bg-slate-800 lg:hidden"
-        >
-          <FiMenu className="text-xl" aria-hidden="true" />
-        </button>
+        <div className="flex items-center gap-2 lg:hidden">
+          <button
+            type="button"
+            aria-label="Open navigation menu"
+            aria-controls="mobile-sidebar"
+            onClick={onOpenSidebar}
+            className="shrink-0 rounded-xl p-2 text-slate-600 transition hover:bg-slate-100 hover:text-slate-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:text-slate-300 dark:hover:bg-slate-800"
+          >
+            <FiMenu className="text-xl" aria-hidden="true" />
+          </button>
+          <Logo size="sm" showSubtitle={false} />
+        </div>
 
         {/* Global Search Bar */}
         <div className="relative min-w-0 flex-1 max-w-xl">
