@@ -22,12 +22,14 @@ const DashboardLayout = () => {
         <main className="p-4 lg:p-8 flex-1">
           <Outlet />
         </main>
-        {/* Professional Global Footer */}
+        {/* Professional Global Footer with Consistent Rainbow WOWCode */}
         <footer className="py-6 px-4 border-t border-slate-200/80 dark:border-slate-800/80 text-center mt-auto bg-white/50 dark:bg-slate-900/50 backdrop-blur-sm">
           <div className="flex flex-wrap items-center justify-center gap-x-2.5 gap-y-1 text-xs text-slate-500 dark:text-slate-400">
             <span className="font-semibold text-slate-700 dark:text-slate-300">Learn. Practice. Grow.</span>
             <span className="text-slate-300 dark:text-slate-700 select-none">•</span>
-            <span className="font-bold text-slate-900 dark:text-white tracking-tight">WOWCode</span>
+            <span className="font-black text-transparent bg-clip-text bg-gradient-to-r from-rose-500 via-amber-500 via-emerald-500 via-sky-500 to-indigo-600 tracking-tight">
+              WOWCode
+            </span>
             <span className="font-semibold text-indigo-600 dark:text-indigo-400">Created by Selvam S</span>
           </div>
         </footer>

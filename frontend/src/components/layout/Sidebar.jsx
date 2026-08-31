@@ -54,7 +54,11 @@ const Sidebar = ({ isOpen, onClose }) => {
         className={`fixed left-0 top-0 z-50 h-full w-64 border-r border-slate-200/90 bg-white shadow-xl lg:shadow-none backdrop-blur transition-transform duration-300 ease-out dark:border-slate-800/90 dark:bg-slate-900 lg:z-40 lg:translate-x-0 flex flex-col justify-between ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}
       >
         <div>
-          <div className="p-5 pr-12 border-b border-slate-100 dark:border-slate-800">
+          {/* Sidebar Header Logo Column with padding-right: 2rem */}
+          <div
+            className="p-5 border-b border-slate-100 dark:border-slate-800"
+            style={{ paddingRight: '2rem' }}
+          >
             <Logo size="md" />
           </div>
           <button
@@ -89,12 +93,17 @@ const Sidebar = ({ isOpen, onClose }) => {
           </nav>
         </div>
 
-        {/* Sidebar Footer with Logout & Signature */}
+        {/* Sidebar Footer with Logout & Consistent Rainbow WOWCode Signature */}
         <div className="p-4 border-t border-slate-100 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/50 space-y-3">
           <div className="px-1 text-[11px] text-slate-400 dark:text-slate-500 leading-tight">
             <div className="text-[10px] text-slate-500 dark:text-slate-400 font-medium">Learn. Practice. Grow.</div>
-            <div className="font-bold text-slate-700 dark:text-slate-300">
-              WOWCode <span className="font-semibold text-indigo-600 dark:text-indigo-400 font-normal">Created by Selvam S</span>
+            <div className="pt-0.5">
+              <span className="font-black text-transparent bg-clip-text bg-gradient-to-r from-rose-500 via-amber-500 via-emerald-500 via-sky-500 to-indigo-600">
+                WOWCode
+              </span>{' '}
+              <span className="font-semibold text-indigo-600 dark:text-indigo-400">
+                Created by Selvam S
+              </span>
             </div>
           </div>
           <button onClick={handleLogout} className="sidebar-link w-full text-rose-600 dark:text-rose-400 hover:text-rose-700 hover:bg-rose-50 dark:hover:bg-rose-500/10">
