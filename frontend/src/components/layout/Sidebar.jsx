@@ -10,16 +10,20 @@ import {
   FiUser,
   FiSettings,
   FiLogOut,
-  FiX
+  FiX,
+  FiSun,
+  FiMoon
 } from 'react-icons/fi'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { logout } from '../../redux/slices/authSlice'
+import { toggleTheme } from '../../redux/slices/themeSlice'
 import Logo from './Logo'
 
 const Sidebar = ({ isOpen, onClose }) => {
   const dispatch = useDispatch()
   const navigate = useNavigate()
+  const theme = useSelector((state) => state.theme.mode)
 
   const links = [
     { to: '/dashboard', icon: FiGrid, label: 'Dashboard' },
@@ -37,6 +41,10 @@ const Sidebar = ({ isOpen, onClose }) => {
     onClose()
     dispatch(logout())
     navigate('/login')
+  }
+
+  const handleToggleTheme = () => {
+    dispatch(toggleTheme())
   }
 
   return (
@@ -93,8 +101,27 @@ const Sidebar = ({ isOpen, onClose }) => {
           </nav>
         </div>
 
-        {/* Sidebar Footer with Logout & Consistent Rainbow WOWCode Signature */}
-        <div className="p-4 border-t border-slate-100 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/50 space-y-3">
+        {/* Sidebar Footer with Theme Toggle, Logout & Consistent Rainbow WOWCode Signature */}
+        <div className="p-4 border-t border-slate-100 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/50 space-y-2.5">
+          {/* In-Drawer Theme Switch for mobile/tablet convenience */}
+          <button
+            type="button"
+            onClick={handleToggleTheme}
+            className="sidebar-link w-full text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition"
+          >
+            {theme === 'light' ? (
+              <>
+                <FiMoon className="text-lg shrink-0 text-slate-700" />
+                <span>Dark Mode</span>
+              </>
+            ) : (
+              <>
+                <FiSun className="text-lg shrink-0 text-amber-400" />
+                <span>Light Mode</span>
+              </>
+            )}
+          </button>
+
           <div className="px-1 text-[11px] text-slate-400 dark:text-slate-500 leading-tight">
             <div className="text-[10px] text-slate-500 dark:text-slate-400 font-medium">Learn. Practice. Grow.</div>
             <div className="pt-0.5">
@@ -106,6 +133,7 @@ const Sidebar = ({ isOpen, onClose }) => {
               </span>
             </div>
           </div>
+
           <button onClick={handleLogout} className="sidebar-link w-full text-rose-600 dark:text-rose-400 hover:text-rose-700 hover:bg-rose-50 dark:hover:bg-rose-500/10">
             <FiLogOut className="text-lg shrink-0" />
             <span>Logout</span>
