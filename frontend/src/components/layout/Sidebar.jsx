@@ -92,9 +92,10 @@ const Sidebar = ({ isOpen, onClose }) => {
         {/* Sidebar Footer with Logout & Signature */}
         <div className="p-4 border-t border-slate-100 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/50 space-y-3">
           <div className="px-1 text-[11px] text-slate-400 dark:text-slate-500 leading-tight">
-            <div className="font-bold text-slate-700 dark:text-slate-300">WOWCode</div>
-            <div className="text-[10px] text-slate-500 dark:text-slate-400">Learn. Practice. Grow.</div>
-            <div className="text-[10px] text-indigo-600 dark:text-indigo-400 font-semibold mt-0.5">Created by Selvam S</div>
+            <div className="text-[10px] text-slate-500 dark:text-slate-400 font-medium">Learn. Practice. Grow.</div>
+            <div className="font-bold text-slate-700 dark:text-slate-300">
+              WOWCode <span className="font-semibold text-indigo-600 dark:text-indigo-400 font-normal">Created by Selvam S</span>
+            </div>
           </div>
           <button onClick={handleLogout} className="sidebar-link w-full text-rose-600 dark:text-rose-400 hover:text-rose-700 hover:bg-rose-50 dark:hover:bg-rose-500/10">
             <FiLogOut className="text-lg shrink-0" />
