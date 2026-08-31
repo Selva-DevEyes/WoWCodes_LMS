@@ -15,7 +15,19 @@ const AuthLayout = () => {
             Learn • Practice • Build • Crack Interviews
           </p>
         </div>
+
         <Outlet />
+
+        {/* Professional Signature Footer */}
+        <div className="text-center pt-2">
+          <div className="inline-flex flex-wrap items-center justify-center gap-x-2.5 gap-y-1 text-[11px] text-slate-400 bg-slate-900/60 px-4 py-2 rounded-full border border-slate-800/80 backdrop-blur-sm">
+            <span className="font-bold text-slate-200 tracking-tight">WOWCode</span>
+            <span className="text-slate-600 select-none">•</span>
+            <span className="text-slate-300 font-medium">Learn. Practice. Grow.</span>
+            <span className="text-slate-600 select-none">•</span>
+            <span className="text-indigo-400 font-semibold">Created by Selvam S</span>
+          </div>
+        </div>
       </div>
     </div>
   )

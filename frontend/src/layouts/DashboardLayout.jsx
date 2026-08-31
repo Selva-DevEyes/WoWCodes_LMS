@@ -15,13 +15,23 @@ const DashboardLayout = () => {
   }, [])
 
   return (
-    <div className="min-h-screen bg-[#f7f8ff] dark:bg-[#16152b]">
+    <div className="min-h-screen bg-slate-50 dark:bg-[#0b0f19] flex flex-col font-sans">
       <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
-      <div className="lg:pl-64">
+      <div className="lg:pl-64 flex flex-col flex-1">
         <Navbar onOpenSidebar={() => setIsSidebarOpen(true)} />
-        <main className="p-4 lg:p-8">
+        <main className="p-4 lg:p-8 flex-1">
           <Outlet />
         </main>
+        {/* Professional Global Footer */}
+        <footer className="py-6 px-4 border-t border-slate-200/80 dark:border-slate-800/80 text-center mt-auto bg-white/50 dark:bg-slate-900/50 backdrop-blur-sm">
+          <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-xs text-slate-500 dark:text-slate-400">
+            <span className="font-bold text-slate-800 dark:text-slate-100 tracking-tight">WOWCode</span>
+            <span className="text-slate-300 dark:text-slate-700 select-none">•</span>
+            <span className="text-slate-600 dark:text-slate-300 font-medium">Learn. Practice. Grow.</span>
+            <span className="text-slate-300 dark:text-slate-700 select-none">•</span>
+            <span className="font-semibold text-indigo-600 dark:text-indigo-400">Created by Selvam S</span>
+          </div>
+        </footer>
       </div>
     </div>
   )
