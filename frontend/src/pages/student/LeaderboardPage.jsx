@@ -27,9 +27,9 @@ const LeaderboardPage = () => {
   }
 
   return (
-    <div className="max-w-4xl mx-auto space-y-6 font-sans pb-3 sm:pb-8 text-left">
+    <div className="max-w-4xl mx-auto space-y-4 font-sans pb-2 sm:pb-6 text-left">
       {/* Header */}
-      <div className="flex items-start gap-3 text-left">
+      <div className="flex items-start gap-3 text-left pb-1">
         <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-500 flex items-center justify-center text-xl sm:text-2xl shrink-0 mt-0.5">
           <FiTrendingUp />
         </div>
