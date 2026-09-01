@@ -146,9 +146,9 @@ const Navbar = ({ onOpenSidebar }) => {
             aria-label="Open navigation menu"
             aria-controls="mobile-sidebar"
             onClick={onOpenSidebar}
-            className="w-9 h-9 flex items-center justify-center rounded-xl text-slate-600 transition hover:bg-slate-100 hover:text-slate-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:text-slate-300 dark:hover:bg-slate-800 lg:hidden active:scale-95"
+            className="w-9 h-9 flex items-center justify-center rounded-xl bg-slate-100/90 dark:bg-slate-800/90 text-slate-700 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700 transition focus:outline-none focus:ring-2 focus:ring-indigo-500 shadow-sm lg:hidden active:scale-95"
           >
-            <FiMenu className="text-xl" aria-hidden="true" />
+            <FiMenu className="text-lg sm:text-xl" aria-hidden="true" />
           </button>
           <div className="lg:hidden">
             <Logo size="sm" showSubtitle={false} />
