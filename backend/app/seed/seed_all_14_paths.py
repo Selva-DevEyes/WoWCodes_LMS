@@ -1,4 +1,5 @@
 """Comprehensive curriculum seeder for WoWCodes LMS."""
+from sqlalchemy import text
 from app.database.session import SessionLocal
 from app.models.role import Role
 from app.models.user import User
@@ -145,6 +146,13 @@ def seed_database(force: bool = False):
     """Seed all 14 courses, modules, topics, lessons, quizzes, and default roles/admin."""
     db = SessionLocal()
     try:
+        # Try to expand column size in PostgreSQL if needed
+        try:
+            db.execute(text("ALTER TABLE courses ALTER COLUMN color TYPE VARCHAR(255);"))
+            db.commit()
+        except Exception:
+            db.rollback()
+
         # 1. Seed Roles
         for name, desc in [
             ("student", "Student role"),
@@ -175,8 +183,8 @@ def seed_database(force: bool = False):
             print(f"Courses already exist in database ({course_count} courses). Skipping seed.")
             return {"status": "already_seeded", "course_count": course_count}
 
-        if force:
-            print("Force re-seeding requested: clearing old curriculum rows...")
+        if force or course_count > 0:
+            print("Cleaning old curriculum rows before fresh seed...")
             db.query(Option).delete()
             db.query(Question).delete()
             db.query(Quiz).delete()
@@ -187,21 +195,21 @@ def seed_database(force: bool = False):
 
         print("Starting full curriculum seeding...")
 
-        # 14 Learning Paths
+        # 14 Learning Paths with compact color keys (< 10 chars)
         courses_data = [
-            ("HTML", "html", "Learn semantic markup, WCAG accessibility, forms, and HTML5 layout.", "Frontend", "beginner", "🌐", "bg-blue-100 text-blue-600"),
-            ("CSS", "css", "Master CSS Box Model, Flexbox, CSS Grid, positioning, and responsive design.", "Frontend", "beginner", "🎨", "bg-purple-100 text-purple-600"),
-            ("JavaScript", "javascript", "Master ES6+, dynamic typing, DOM, async/await, closures, and event loop.", "Frontend", "intermediate", "⚡", "bg-yellow-100 text-yellow-600"),
-            ("React", "react", "Build modern user interfaces with React 19, hooks, virtual DOM, and JSX.", "Frontend", "intermediate", "⚛️", "bg-cyan-100 text-cyan-600"),
-            ("Redux", "redux", "Manage global application state with Redux Toolkit and async thunks.", "Frontend", "intermediate", "🔄", "bg-violet-100 text-violet-600"),
-            ("Python", "python", "Learn Python programming from syntax basics to memory optimization.", "Backend", "beginner", "🐍", "bg-green-100 text-green-600"),
-            ("FastAPI", "fastapi", "Build high-performance asynchronous REST APIs with FastAPI & Pydantic.", "Backend", "intermediate", "🚀", "bg-teal-100 text-teal-600"),
-            ("SQL", "sql", "Master SQL DDL/DML/DQL, complex joins, aggregation, and query optimization.", "Database", "intermediate", "🗄️", "bg-orange-100 text-orange-600"),
-            ("Git & GitHub", "git-github", "Distributed version control, branching strategies, rebase, and code reviews.", "Tools", "beginner", "🔀", "bg-red-100 text-red-600"),
-            ("AI & ML", "ai-ml", "Artificial Intelligence, Machine Learning pipelines, and Deep Learning.", "AI", "advanced", "🤖", "bg-indigo-100 text-indigo-600"),
-            ("Node.js Basics", "nodejs", "Asynchronous server-side JavaScript runtime, streams, and native modules.", "Backend", "intermediate", "🟢", "bg-emerald-100 text-emerald-600"),
-            ("Express.js", "express", "Build fast, flexible web applications, REST routes, and middleware pipelines.", "Backend", "intermediate", "🚂", "bg-stone-100 text-stone-600"),
-            ("Database", "database", "Relational databases, NoSQL systems, indexing, and ORM abstractions.", "Database", "intermediate", "🗄️", "bg-orange-100 text-orange-600"),
+            ("HTML", "html", "Learn semantic markup, WCAG accessibility, forms, and HTML5 layout.", "Frontend", "beginner", "🌐", "blue"),
+            ("CSS", "css", "Master CSS Box Model, Flexbox, CSS Grid, positioning, and responsive design.", "Frontend", "beginner", "🎨", "purple"),
+            ("JavaScript", "javascript", "Master ES6+, dynamic typing, DOM, async/await, closures, and event loop.", "Frontend", "intermediate", "⚡", "yellow"),
+            ("React", "react", "Build modern user interfaces with React 19, hooks, virtual DOM, and JSX.", "Frontend", "intermediate", "⚛️", "cyan"),
+            ("Redux", "redux", "Manage global application state with Redux Toolkit and async thunks.", "Frontend", "intermediate", "🔄", "violet"),
+            ("Python", "python", "Learn Python programming from syntax basics to memory optimization.", "Backend", "beginner", "🐍", "green"),
+            ("FastAPI", "fastapi", "Build high-performance asynchronous REST APIs with FastAPI & Pydantic.", "Backend", "intermediate", "🚀", "teal"),
+            ("SQL", "sql", "Master SQL DDL/DML/DQL, complex joins, aggregation, and query optimization.", "Database", "intermediate", "🗄️", "orange"),
+            ("Git & GitHub", "git-github", "Distributed version control, branching strategies, rebase, and code reviews.", "Tools", "beginner", "🔀", "red"),
+            ("AI & ML", "ai-ml", "Artificial Intelligence, Machine Learning pipelines, and Deep Learning.", "AI", "advanced", "🤖", "indigo"),
+            ("Node.js Basics", "nodejs", "Asynchronous server-side JavaScript runtime, streams, and native modules.", "Backend", "intermediate", "🟢", "emerald"),
+            ("Express.js", "express", "Build fast, flexible web applications, REST routes, and middleware pipelines.", "Backend", "intermediate", "🚂", "stone"),
+            ("Database", "database", "Relational databases, NoSQL systems, indexing, and ORM abstractions.", "Database", "intermediate", "🗄️", "amber"),
             (
                 "Final Evaluation of Software Engineering Program",
                 "final-evaluation-sde",
@@ -209,7 +217,7 @@ def seed_database(force: bool = False):
                 "Certification",
                 "advanced",
                 "🎓",
-                "bg-gradient-to-r from-indigo-500 to-purple-600 text-white"
+                "gradient"
             )
         ]
 
