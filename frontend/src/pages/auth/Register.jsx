@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { FiUser, FiMail, FiLock, FiLoader, FiArrowRight } from 'react-icons/fi'
+import { FiUser, FiMail, FiLock, FiLoader, FiArrowRight, FiEye, FiEyeOff } from 'react-icons/fi'
 import { apiClient } from '../../api/apiClient'
 import { ENDPOINTS } from '../../api/endpoints'
 
@@ -13,6 +13,8 @@ const Register = () => {
     password: '',
     confirmPassword: '',
   })
+  const [showPassword, setShowPassword] = useState(false)
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
 
@@ -121,14 +123,22 @@ const Register = () => {
           <div className="relative">
             <FiLock className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400" />
             <input
-              type="password"
+              type={showPassword ? 'text' : 'password'}
               required
               minLength={8}
               value={form.password}
               onChange={(e) => setForm({ ...form, password: e.target.value })}
-              className="input pl-10 text-xs sm:text-sm font-medium"
+              className="input pl-10 pr-10 text-xs sm:text-sm font-medium"
               placeholder="••••••••"
             />
+            <button
+              type="button"
+              onClick={() => setShowPassword(!showPassword)}
+              aria-label={showPassword ? 'Hide password' : 'Show password'}
+              className="absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition focus:outline-none cursor-pointer"
+            >
+              {showPassword ? <FiEyeOff className="w-4 h-4" /> : <FiEye className="w-4 h-4" />}
+            </button>
           </div>
         </div>
 
@@ -139,34 +149,43 @@ const Register = () => {
           <div className="relative">
             <FiLock className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400" />
             <input
-              type="password"
+              type={showConfirmPassword ? 'text' : 'password'}
               required
+              minLength={8}
               value={form.confirmPassword}
               onChange={(e) => setForm({ ...form, confirmPassword: e.target.value })}
-              className="input pl-10 text-xs sm:text-sm font-medium"
+              className="input pl-10 pr-10 text-xs sm:text-sm font-medium"
               placeholder="••••••••"
             />
+            <button
+              type="button"
+              onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+              aria-label={showConfirmPassword ? 'Hide password' : 'Show password'}
+              className="absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition focus:outline-none cursor-pointer"
+            >
+              {showConfirmPassword ? <FiEyeOff className="w-4 h-4" /> : <FiEye className="w-4 h-4" />}
+            </button>
           </div>
         </div>
 
         <button type="submit" disabled={loading} className="btn-primary w-full py-3">
           {loading ? (
-            <span className="inline-flex items-center gap-2">
-              <FiLoader className="animate-spin" /> Creating Account...
+            <span className="flex items-center gap-2">
+              <FiLoader className="animate-spin" /> Registering Student Account...
             </span>
           ) : (
-            <span className="inline-flex items-center gap-2">
-              Register & Proceed to Login <FiArrowRight />
+            <span className="flex items-center gap-2">
+              Create Free Account <FiArrowRight />
             </span>
           )}
         </button>
       </form>
 
-      <div className="pt-4 border-t border-slate-100 dark:border-slate-800 text-center">
-        <p className="text-xs text-slate-600 dark:text-slate-400">
-          Already registered?{' '}
+      <div className="text-center">
+        <p className="text-xs text-slate-500 dark:text-slate-400">
+          Already have an account?{' '}
           <Link to="/login" className="text-indigo-600 dark:text-indigo-400 font-bold hover:underline">
-            Log In Here
+            Sign in here
           </Link>
         </p>
       </div>
