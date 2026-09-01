@@ -17,13 +17,24 @@ const QuizResultPage = () => {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    apiClient.get('/quiz/results/mine').then((res) => {
-      const found = res.data.find((r) => r.id === parseInt(resultId))
-      if (found) {
-        setResult(found)
-      }
-      setLoading(false)
-    }).catch(() => setLoading(false))
+    apiClient
+      .get(`/quiz/result/${resultId}`)
+      .then((res) => {
+        setResult(res.data)
+        setLoading(false)
+      })
+      .catch(() => {
+        apiClient
+          .get('/quiz/results/mine')
+          .then((res) => {
+            const found = res.data.find((r) => r.id === parseInt(resultId))
+            if (found) {
+              setResult(found)
+            }
+            setLoading(false)
+          })
+          .catch(() => setLoading(false))
+      })
   }, [resultId])
 
   if (loading) {

@@ -24,6 +24,8 @@ const QuizPage = () => {
   const [answers, setAnswers] = useState({}) // { questionId: selectedOptionId }
   const [revealed, setRevealed] = useState({}) // { questionId: true }
   const [loading, setLoading] = useState(true)
+  const [submitting, setSubmitting] = useState(false)
+  const [submitError, setSubmitError] = useState('')
 
   useEffect(() => {
     apiClient
@@ -73,19 +75,34 @@ const QuizPage = () => {
   }
 
   const handleSubmit = async () => {
+    if (submitting) return
+    setSubmitting(true)
+    setSubmitError('')
+
+    const formattedAnswers = (quiz?.questions || []).map((q) => ({
+      question_id: q.id,
+      selected_option_id: answers[q.id] ? parseInt(answers[q.id]) : null,
+    }))
+
     const payload = {
       quiz_id: parseInt(quizId),
       time_taken_seconds: 60,
-      answers: Object.entries(answers).map(([questionId, selectedOptionId]) => ({
-        question_id: parseInt(questionId),
-        selected_option_id: parseInt(selectedOptionId),
-      })),
+      answers: formattedAnswers,
     }
+
     try {
       const { data } = await apiClient.post(ENDPOINTS.submitQuiz(quizId), payload)
-      navigate(`/quiz/result/${data.id}`)
+      if (data && data.id) {
+        navigate(`/quiz/result/${data.id}`)
+      } else {
+        throw new Error('No evaluation result returned by server')
+      }
     } catch (err) {
       console.error('Failed to submit quiz:', err)
+      const errorMsg = err.response?.data?.detail || err.message || 'Failed to submit quiz. Please check network and retry.'
+      setSubmitError(typeof errorMsg === 'string' ? errorMsg : JSON.stringify(errorMsg))
+    } finally {
+      setSubmitting(false)
     }
   }
 
@@ -387,13 +404,23 @@ const QuizPage = () => {
         )}
       </div>
 
+      {/* Submission Error Banner if any */}
+      {submitError && (
+        <div className="p-4 rounded-2xl bg-rose-950/40 border border-rose-500/50 text-rose-200 text-xs font-semibold flex items-center justify-between">
+          <span>⚠️ {submitError}</span>
+          <button onClick={() => setSubmitError('')} className="text-rose-400 hover:text-white text-xs underline ml-2">
+            Dismiss
+          </button>
+        </div>
+      )}
+
       {/* Navigation & Submit Buttons Bar */}
       <div className="flex flex-col sm:flex-row items-center justify-between gap-3 pt-2">
         <button
           onClick={handlePrev}
-          disabled={currentQ === 0}
+          disabled={currentQ === 0 || submitting}
           className={`w-full sm:w-auto px-5 py-3 rounded-2xl text-xs font-semibold flex items-center justify-center gap-2 transition border ${
-            currentQ === 0
+            currentQ === 0 || submitting
               ? 'opacity-40 cursor-not-allowed bg-slate-900 border-slate-800 text-slate-500'
               : 'bg-slate-800 hover:bg-slate-700 border-slate-700 text-slate-200'
           }`}
@@ -404,9 +431,21 @@ const QuizPage = () => {
         {isLast ? (
           <button
             onClick={handleSubmit}
-            className="w-full sm:w-auto px-6 py-3.5 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white text-xs font-extrabold rounded-2xl transition shadow-lg shadow-emerald-600/30 flex items-center justify-center gap-2"
+            disabled={submitting}
+            className={`w-full sm:w-auto px-6 py-3.5 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white text-xs font-extrabold rounded-2xl transition shadow-lg shadow-emerald-600/30 flex items-center justify-center gap-2 ${
+              submitting ? 'opacity-75 cursor-wait' : ''
+            }`}
           >
-            <FiAward className="w-4 h-4" /> Submit Quiz & View Grade
+            {submitting ? (
+              <>
+                <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                Submitting & Evaluating...
+              </>
+            ) : (
+              <>
+                <FiAward className="w-4 h-4" /> Submit Quiz & View Grade
+              </>
+            )}
           </button>
         ) : (
           <button

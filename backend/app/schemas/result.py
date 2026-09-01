@@ -9,7 +9,7 @@ class AnswerSubmit(BaseModel):
     """Answer submission payload."""
 
     question_id: int
-    selected_option_id: int
+    selected_option_id: Optional[int] = None
 
 
 class ResultSubmit(BaseModel):
@@ -25,7 +25,7 @@ class AnswerResponse(ORMModel):
 
     id: int
     question_id: int
-    selected_option_id: int
+    selected_option_id: Optional[int] = None
     is_correct: int
     points_earned: int
 

@@ -1,5 +1,6 @@
 """Answer model - user's answer to a question."""
-from sqlalchemy import ForeignKey, Integer, String
+from typing import Optional
+from sqlalchemy import ForeignKey, Integer
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from app.database.base import Base, TimestampMixin
@@ -13,7 +14,7 @@ class Answer(Base, TimestampMixin):
     id: Mapped[int] = mapped_column(primary_key=True, index=True)
     result_id: Mapped[int] = mapped_column(ForeignKey("results.id"), nullable=False, index=True)
     question_id: Mapped[int] = mapped_column(ForeignKey("questions.id"), nullable=False, index=True)
-    selected_option_id: Mapped[int] = mapped_column(ForeignKey("options.id"), nullable=False)
+    selected_option_id: Mapped[Optional[int]] = mapped_column(ForeignKey("options.id"), nullable=True)
     is_correct: Mapped[int] = mapped_column(Integer, default=0, nullable=False)
     points_earned: Mapped[int] = mapped_column(Integer, default=0, nullable=False)
 
