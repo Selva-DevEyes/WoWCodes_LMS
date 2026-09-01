@@ -78,13 +78,7 @@ const Sidebar = ({ isOpen, onClose }) => {
             <FiX className="text-xl" aria-hidden="true" />
           </button>
 
-          <div className="px-4 py-3">
-            <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500 px-3">
-              Navigation
-            </span>
-          </div>
-
-          <nav className="space-y-1 px-3">
+          <nav className="space-y-1 px-3 pt-3">
             {links.map((link) => (
               <NavLink
                 key={link.to}
