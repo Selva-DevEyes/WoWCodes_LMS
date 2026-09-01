@@ -121,10 +121,10 @@ const Dashboard = () => {
 
       {/* Key Metric Stats Grid */}
       <div className="grid grid-cols-1 gap-4 min-[560px]:grid-cols-2 min-[769px]:grid-cols-4">
-        <StatCard icon={FiBookOpen} label="Enrolled Paths" value={stats?.total_courses || courses.length} color="text-blue-500" />
-        <StatCard icon={FiCheckCircle} label="Completed Modules" value={analytics?.completed_topics_count || stats?.completed_topics || 0} color="text-emerald-500" />
-        <StatCard icon={FiTarget} label="Quiz Accuracy Rate" value={`${analytics?.quiz_avg_accuracy_pct || 85}%`} color="text-purple-500" />
-        <StatCard icon={FiAward} label="Total Score Points" value={analytics?.learning_score || stats?.total_score || 0} color="text-amber-500" />
+        <StatCard icon={FiBookOpen} label="Enrolled Paths" value={stats?.total_courses || courses.length} color="blue" />
+        <StatCard icon={FiCheckCircle} label="Completed Modules" value={analytics?.completed_topics_count || stats?.completed_topics || 0} color="emerald" />
+        <StatCard icon={FiTarget} label="Quiz Accuracy Rate" value={`${analytics?.quiz_avg_accuracy_pct || 85}%`} color="purple" />
+        <StatCard icon={FiAward} label="Total Score Points" value={analytics?.learning_score || stats?.total_score || 0} color="amber" />
       </div>
 
       {/* Professional Visual Graphs Row */}
