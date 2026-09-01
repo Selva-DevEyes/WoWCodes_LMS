@@ -98,6 +98,10 @@ const ProfilePage = () => {
       <div className="card flex items-center gap-6 p-6">
         <img
           src={avatarSrc}
+          onError={(e) => {
+            e.currentTarget.onerror = null
+            e.currentTarget.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(user?.username || 'U')}&background=6366f1&color=fff`
+          }}
           alt="Profile"
           className="w-20 h-20 rounded-2xl object-cover ring-2 ring-indigo-500/30 shrink-0"
         />

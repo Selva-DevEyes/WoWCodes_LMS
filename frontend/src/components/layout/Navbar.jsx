@@ -268,7 +268,11 @@ const Navbar = ({ onOpenSidebar }) => {
           {/* User Profile Badge */}
           <div className="flex items-center gap-2 pl-1 sm:pl-2 border-l border-slate-200 dark:border-slate-800">
             <img
-              src={user?.avatar_url || `https://ui-avatars.com/api/?name=${user?.username || 'U'}&background=6366f1&color=fff`}
+              src={user?.avatar_url || `https://ui-avatars.com/api/?name=${encodeURIComponent(user?.username || 'U')}&background=6366f1&color=fff`}
+              onError={(e) => {
+                e.currentTarget.onerror = null
+                e.currentTarget.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(user?.username || 'U')}&background=6366f1&color=fff`
+              }}
               alt="Profile"
               className="w-8 h-8 rounded-xl object-cover ring-2 ring-indigo-500/20"
             />

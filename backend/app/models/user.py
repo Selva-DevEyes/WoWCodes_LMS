@@ -1,6 +1,6 @@
 """User model."""
 from datetime import datetime
-from sqlalchemy import Boolean, DateTime, ForeignKey, Integer, String
+from sqlalchemy import Boolean, DateTime, ForeignKey, Integer, String, Text
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from app.database.base import Base, TimestampMixin
@@ -19,7 +19,7 @@ class User(Base, TimestampMixin):
     role_id: Mapped[int] = mapped_column(ForeignKey("roles.id"), nullable=False)
     is_active: Mapped[bool] = mapped_column(Boolean, default=True, nullable=False)
     is_verified: Mapped[bool] = mapped_column(Boolean, default=False, nullable=False)
-    avatar_url: Mapped[str] = mapped_column(String(500), nullable=True)
+    avatar_url: Mapped[str] = mapped_column(Text, nullable=True)
     bio: Mapped[str] = mapped_column(String(1000), nullable=True)
     total_score: Mapped[int] = mapped_column(Integer, default=0, nullable=False)
     current_streak: Mapped[int] = mapped_column(Integer, default=0, nullable=False)

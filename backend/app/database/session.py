@@ -61,8 +61,16 @@ def init_db() -> None:
 
     Base.metadata.create_all(bind=engine)
 
-    # Auto-seed if database tables are empty (e.g. fresh Render PostgreSQL deployment)
+    # Ensure avatar_url column is TEXT for persistent Base64 avatars
     db = SessionLocal()
+    try:
+        from sqlalchemy import text
+        db.execute(text("ALTER TABLE users ALTER COLUMN avatar_url TYPE TEXT;"))
+        db.commit()
+    except Exception:
+        db.rollback()
+
+    # Auto-seed if database tables are empty (e.g. fresh Render PostgreSQL deployment)
     try:
         from app.models.course import Course
         if db.query(Course).count() == 0:
