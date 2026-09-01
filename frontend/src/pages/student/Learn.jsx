@@ -168,7 +168,7 @@ const Learn = () => {
                 className={`p-5 rounded-2xl text-left transition-all duration-200 border flex flex-col justify-between space-y-3 relative overflow-hidden group ${
                   isActive
                     ? 'bg-slate-900 border-indigo-500 text-white shadow-xl shadow-indigo-500/20 ring-2 ring-indigo-500/40 scale-[1.01]'
-                    : 'bg-slate-900/80 hover:bg-slate-900 border-slate-800 text-slate-200 hover:border-slate-700'
+                    : 'bg-slate-950 hover:bg-slate-900 border-slate-800 text-slate-200 hover:border-slate-700'
                 }`}
               >
                 {/* Active Indicator Top Highlight Bar */}

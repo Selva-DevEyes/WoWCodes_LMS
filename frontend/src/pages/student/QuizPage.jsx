@@ -112,13 +112,41 @@ const QuizPage = () => {
   const answeredCount = Object.keys(answers).length
   const progressPct = Math.round(((currentQ + 1) / quiz.questions.length) * 100)
 
+  const parsedPrompt = (() => {
+    const rawText = question?.text || ''
+    // Match "Q1 [Topic - Perspective]: Question..." or "[Topic - Perspective]: Question..." or "[Topic] Question..."
+    const bracketMatch = rawText.match(/^(?:Q\d+\s*)?\[(.*?)\](?::)?\s*(.*)$/i)
+    if (bracketMatch) {
+      const tagContent = bracketMatch[1].trim()
+      const questionBody = bracketMatch[2].trim() || rawText.trim()
+      return {
+        tag: `[${tagContent}]`,
+        text: questionBody
+      }
+    }
+
+    // Match "Q1: Question..."
+    const qNumMatch = rawText.match(/^Q\d+[:.]\s*(.*)$/i)
+    if (qNumMatch) {
+      return {
+        tag: `[${quiz?.title || 'Technical Evaluation'} - Employer Perspective]`,
+        text: qNumMatch[1].trim()
+      }
+    }
+
+    return {
+      tag: `[${quiz?.title || 'Technical Evaluation'} - Employer Perspective]`,
+      text: rawText.trim()
+    }
+  })()
+
   return (
     <div className="max-w-7xl w-full mx-auto space-y-6 font-sans pb-3 sm:pb-8 text-left">
       {/* Top Back Button to Topic */}
       <div className="flex items-center justify-between">
         <button
           onClick={() => navigate(-1)}
-          className="inline-flex items-center gap-2 text-slate-400 hover:text-indigo-400 transition font-bold text-xs sm:text-sm bg-slate-900 px-4 py-2 rounded-xl border border-slate-800"
+          className="inline-flex items-center gap-2 text-slate-400 hover:text-indigo-400 transition font-bold text-xs sm:text-sm bg-slate-950 px-4 py-2 rounded-xl border border-slate-800"
         >
           <FiArrowLeft className="w-4 h-4" /> Back to Topic Masterclass
         </button>
@@ -128,7 +156,7 @@ const QuizPage = () => {
       </div>
 
       {/* Quiz Header Banner */}
-      <div className="bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-8 shadow-xl text-white flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+      <div className="bg-slate-950 border border-slate-800 rounded-3xl p-6 sm:p-8 shadow-xl text-white flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div className="space-y-2">
           <div className="flex items-center gap-2">
             <span className="text-xs px-2.5 py-0.5 rounded-full bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 uppercase font-semibold font-mono">
@@ -142,7 +170,7 @@ const QuizPage = () => {
         </div>
 
         {/* Quick Stats Pill */}
-        <div className="flex items-center gap-3 bg-slate-950 p-3.5 rounded-2xl border border-slate-800 self-start sm:self-auto shrink-0 font-mono">
+        <div className="flex items-center gap-3 bg-slate-900 p-3.5 rounded-2xl border border-slate-800 self-start sm:self-auto shrink-0 font-mono">
           <div className="text-right">
             <p className="text-[11px] text-slate-400">Questions Answered</p>
             <p className="text-sm font-extrabold text-indigo-400">
@@ -153,7 +181,7 @@ const QuizPage = () => {
       </div>
 
       {/* Interactive Question Step Numbers Indicator */}
-      <div className="bg-slate-900 border border-slate-800 rounded-2xl p-3 shadow-md flex items-center justify-between gap-2 overflow-x-auto">
+      <div className="bg-slate-950 border border-slate-800 rounded-2xl p-3 shadow-md flex items-center justify-between gap-2 overflow-x-auto">
         {quiz.questions.map((q, idx) => {
           const userAns = answers[q.id]
           const qCorrect = q.options.find((o) => o.is_correct)
@@ -172,7 +200,7 @@ const QuizPage = () => {
                   ? qIsRight
                     ? 'border-emerald-500/50 bg-emerald-500/20 text-emerald-300'
                     : 'border-rose-500/50 bg-rose-500/20 text-rose-300'
-                  : 'border-slate-800 bg-slate-950 text-slate-400 hover:border-slate-700'
+                  : 'border-slate-800 bg-slate-900 text-slate-400 hover:border-slate-700'
               }`}
             >
               <span>{idx + 1}</span>
@@ -193,7 +221,7 @@ const QuizPage = () => {
       </div>
 
       {/* Main Full Width Question Container */}
-      <div className="bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-8 shadow-xl space-y-6">
+      <div className="bg-slate-950 border border-slate-800 rounded-3xl p-6 sm:p-8 shadow-xl space-y-5 text-left">
         <div className="flex items-center justify-between pb-4 border-b border-slate-800">
           <span className="text-xs font-mono font-bold text-indigo-400 bg-indigo-500/10 px-3 py-1 rounded-lg border border-indigo-500/20">
             Question {currentQ + 1} of {quiz.questions.length}
@@ -201,10 +229,17 @@ const QuizPage = () => {
           <span className="text-xs text-slate-400 font-mono">10 Points</span>
         </div>
 
-        {/* Question Prompt */}
-        <h2 className="text-lg sm:text-xl font-bold text-white leading-relaxed">
-          {question.text}
-        </h2>
+        {/* Question Prompt with clean bracketed topic tag on its own row */}
+        <div className="space-y-2.5 text-left">
+          <div className="flex flex-wrap items-center gap-2">
+            <span className="inline-flex items-center gap-1.5 text-xs font-mono font-bold px-3 py-1 rounded-xl bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 whitespace-nowrap shrink-0 w-fit">
+              {parsedPrompt.tag}
+            </span>
+          </div>
+          <h2 className="text-base sm:text-lg lg:text-xl font-bold text-white leading-relaxed text-left">
+            {parsedPrompt.text}
+          </h2>
+        </div>
 
         {/* Answer Options Grid */}
         <div className="space-y-3 pt-2">
