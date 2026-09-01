@@ -113,7 +113,7 @@ const QuizPage = () => {
   const progressPct = Math.round(((currentQ + 1) / quiz.questions.length) * 100)
 
   return (
-    <div className="max-w-7xl w-full mx-auto space-y-6 font-sans pb-16">
+    <div className="max-w-7xl w-full mx-auto space-y-6 font-sans pb-3 sm:pb-8 text-left">
       {/* Top Back Button to Topic */}
       <div className="flex items-center justify-between">
         <button

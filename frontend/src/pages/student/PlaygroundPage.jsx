@@ -3,7 +3,7 @@ import { FiCode, FiZap, FiCpu } from 'react-icons/fi'
 
 export default function PlaygroundPage() {
   return (
-    <div className="max-w-7xl mx-auto space-y-6 font-sans pb-16">
+    <div className="max-w-7xl mx-auto space-y-6 font-sans pb-3 sm:pb-8 text-left">
       {/* Page Banner */}
       <div className="bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 border border-indigo-500/30 rounded-3xl p-6 sm:p-8 shadow-xl text-white">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">

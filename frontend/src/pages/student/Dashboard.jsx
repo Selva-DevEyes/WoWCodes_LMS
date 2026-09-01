@@ -82,7 +82,7 @@ const Dashboard = () => {
     : courses.filter(c => c.category?.toLowerCase().includes(activeCategoryFilter.toLowerCase()))
 
   return (
-    <div className="space-y-8 max-w-7xl mx-auto font-sans pb-12">
+    <div className="space-y-6 max-w-7xl mx-auto font-sans pb-3 sm:pb-8 text-left">
       {/* Hero Welcome Banner */}
       <div className="relative overflow-hidden bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 border border-indigo-500/30 rounded-3xl p-6 sm:p-8 shadow-2xl text-white">
         <div className="absolute -right-16 -top-16 w-64 h-64 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none" />

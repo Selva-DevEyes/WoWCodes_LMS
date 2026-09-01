@@ -271,9 +271,9 @@ export default function CodePlayground({ initialCode, initialLanguage = 'javascr
 
           <div className="flex-1 font-mono text-xs overflow-y-auto max-h-[320px] space-y-2 p-1">
             {outputLogs.length === 0 ? (
-              <div className="h-full flex flex-col items-center justify-center text-slate-600 space-y-2 py-12">
-                <FiTerminal className="w-8 h-8 opacity-40 text-slate-500" />
-                <p className="text-xs font-mono text-slate-500">Click "Run Code" to inspect output logs here.</p>
+              <div className="h-full flex flex-col items-center justify-center text-slate-600 space-y-1.5 py-4 sm:py-8 text-center">
+                <FiTerminal className="w-6 h-6 sm:w-8 sm:h-8 opacity-40 text-slate-500" />
+                <p className="text-xs font-mono text-slate-400">Click "Run Code" to inspect output logs here.</p>
               </div>
             ) : (
               outputLogs.map((log, i) => (

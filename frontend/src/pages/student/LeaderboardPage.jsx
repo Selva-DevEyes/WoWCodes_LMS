@@ -27,17 +27,17 @@ const LeaderboardPage = () => {
   }
 
   return (
-    <div className="max-w-4xl mx-auto space-y-6 font-sans pb-16">
+    <div className="max-w-4xl mx-auto space-y-6 font-sans pb-3 sm:pb-8 text-left">
       {/* Header */}
-      <div className="flex items-center gap-3">
-        <div className="w-12 h-12 rounded-2xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-500 flex items-center justify-center text-2xl shrink-0">
+      <div className="flex items-start gap-3 text-left">
+        <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-500 flex items-center justify-center text-xl sm:text-2xl shrink-0 mt-0.5">
           <FiTrendingUp />
         </div>
-        <div>
-          <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
+        <div className="text-left">
+          <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
             Leaderboard & Rankings
           </h1>
-          <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-normal mt-1">
+          <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-normal mt-0.5">
             Top engineering achievers and overall curriculum points
           </p>
         </div>

@@ -41,25 +41,25 @@ const NotesPage = () => {
   }
 
   return (
-    <div className="space-y-6 max-w-7xl mx-auto font-sans pb-16">
+    <div className="space-y-6 max-w-7xl mx-auto font-sans pb-3 sm:pb-8 text-left">
       {/* Header */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-        <div className="flex items-center gap-3">
-          <div className="w-12 h-12 rounded-2xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-500 flex items-center justify-center text-2xl shrink-0">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-left">
+        <div className="flex items-start gap-3 text-left">
+          <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-500 flex items-center justify-center text-xl sm:text-2xl shrink-0 mt-0.5">
             <FiFileText />
           </div>
-          <div>
-            <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
+          <div className="text-left">
+            <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
               My Engineering Study Notes
             </h1>
-            <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-normal mt-1">
+            <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-normal mt-0.5">
               Capture code snippets, system design insights, and interview tips
             </p>
           </div>
         </div>
 
-        <button onClick={() => setShowForm(!showForm)} className="btn-primary self-start sm:self-auto">
-          <FiPlus className="mr-1.5" /> {showForm ? 'Cancel Note' : 'Create New Note'}
+        <button onClick={() => setShowForm(!showForm)} className="btn-primary self-start sm:self-auto w-fit shrink-0 whitespace-nowrap">
+          <FiPlus className="mr-1.5 shrink-0" /> {showForm ? 'Cancel Note' : 'Create New Note'}
         </button>
       </div>
 

@@ -105,30 +105,30 @@ const TopicDetail = () => {
   const isFinalExamTopic = topic.slug?.includes('final-sde-certification-exam')
 
   return (
-    <div className="space-y-6 max-w-7xl mx-auto font-sans pb-16">
-      <Link to="/learn" className="inline-flex items-center gap-2 text-slate-400 hover:text-indigo-400 transition font-medium text-sm">
-        <FiArrowLeft /> Back to Learning Paths
+    <div className="space-y-6 max-w-7xl mx-auto font-sans pb-3 sm:pb-8 text-left">
+      <Link to="/learn" className="inline-flex items-center gap-2 text-slate-400 hover:text-indigo-400 transition font-medium text-sm w-fit">
+        <FiArrowLeft className="shrink-0" /> Back to Learning Paths
       </Link>
 
       {/* Main Header Banner */}
-      <div className="card border border-slate-200 dark:border-slate-800 bg-slate-900 text-white p-6 sm:p-8 rounded-3xl shadow-xl">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-          <div>
-            <div className="flex flex-wrap items-center gap-2 mb-2">
-              <span className="text-xs px-2.5 py-0.5 rounded-full bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 uppercase font-semibold font-mono whitespace-nowrap shrink-0">
+      <div className="card border border-slate-200 dark:border-slate-800 bg-slate-900 text-white p-5 sm:p-8 rounded-3xl shadow-xl">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 text-left">
+          <div className="space-y-1.5 text-left">
+            <div className="flex flex-wrap items-center gap-2 mb-1">
+              <span className="text-xs px-2.5 py-0.5 rounded-full bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 uppercase font-semibold font-mono whitespace-nowrap shrink-0 w-fit">
                 {isFinalExamTopic ? 'Certification Capstone' : 'Topic Module'}
               </span>
             </div>
-            <h1 className="text-2xl sm:text-3xl font-black text-white">{topic.title}</h1>
-            <p className="text-slate-300 text-sm max-w-3xl mt-2 leading-relaxed">{topic.description}</p>
+            <h1 className="text-xl sm:text-2xl lg:text-3xl font-black text-white">{topic.title}</h1>
+            <p className="text-slate-300 text-xs sm:text-sm max-w-3xl leading-relaxed">{topic.description}</p>
           </div>
           <button
             onClick={markComplete}
-            className={`px-5 py-2.5 rounded-2xl text-xs font-bold transition flex items-center gap-2 self-start sm:self-auto ${
+            className={`px-4 sm:px-5 py-2.5 rounded-2xl text-xs font-bold transition flex items-center gap-2 self-start md:self-auto shrink-0 whitespace-nowrap w-fit ${
               completed ? 'bg-emerald-600 text-white shadow-lg shadow-emerald-600/30' : 'bg-indigo-600 hover:bg-indigo-500 text-white'
             }`}
           >
-            <FiCheckCircle /> {completed ? 'Topic Completed!' : 'Mark as Complete'}
+            <FiCheckCircle className="shrink-0" /> {completed ? 'Topic Completed!' : 'Mark as Complete'}
           </button>
         </div>
       </div>

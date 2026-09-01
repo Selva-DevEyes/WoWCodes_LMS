@@ -19,11 +19,12 @@ const DashboardLayout = () => {
       <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
       <div className="lg:pl-64 flex flex-col flex-1">
         <Navbar onOpenSidebar={() => setIsSidebarOpen(true)} />
-        <main className="p-4 lg:p-8 flex-1">
+        {/* Main Content Container with reduced mobile padding */}
+        <main className="p-3 sm:p-4 lg:p-8 pb-3 sm:pb-6 flex-1 text-left">
           <Outlet />
         </main>
         {/* Professional Global Footer with Consistent Rainbow WOWCode */}
-        <footer className="py-6 px-4 border-t border-slate-200/80 dark:border-slate-800/80 text-center mt-auto bg-white/50 dark:bg-slate-900/50 backdrop-blur-sm">
+        <footer className="py-4 sm:py-6 px-4 border-t border-slate-200/80 dark:border-slate-800/80 text-center mt-auto bg-white/50 dark:bg-slate-900/50 backdrop-blur-sm">
           <div className="flex flex-wrap items-center justify-center gap-x-2.5 gap-y-1 text-xs text-slate-500 dark:text-slate-400">
             <span className="font-semibold text-slate-700 dark:text-slate-300">Learn. Practice. Grow.</span>
             <span className="text-slate-300 dark:text-slate-700 select-none">•</span>

@@ -53,15 +53,15 @@ const CertificatesPage = () => {
   }
 
   return (
-    <div className="space-y-8 max-w-7xl mx-auto font-sans pb-20">
+    <div className="space-y-6 max-w-7xl mx-auto font-sans pb-3 sm:pb-8 text-left">
       {/* Header */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 print:hidden">
-        <div className="flex items-center gap-3.5">
-          <div className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-amber-500 to-amber-600 text-white flex items-center justify-center text-2xl shrink-0 shadow-md shadow-amber-500/20">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 print:hidden text-left">
+        <div className="flex items-start gap-3.5 text-left">
+          <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-gradient-to-tr from-amber-500 to-amber-600 text-white flex items-center justify-center text-xl sm:text-2xl shrink-0 shadow-md shadow-amber-500/20 mt-0.5">
             <FiAward />
           </div>
-          <div>
-            <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
+          <div className="text-left">
+            <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
               Official Engineering Certifications
             </h1>
             <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-normal mt-0.5">
@@ -71,12 +71,12 @@ const CertificatesPage = () => {
         </div>
 
         {selectedCert && (
-          <div className="flex items-center gap-2 self-start sm:self-auto">
+          <div className="flex items-center gap-2 self-start sm:self-auto shrink-0 w-fit">
             <button
               onClick={handlePrintCertificate}
-              className="btn-primary flex items-center gap-2 text-xs py-2.5 px-4"
+              className="btn-primary flex items-center gap-2 text-xs py-2.5 px-4 w-fit whitespace-nowrap"
             >
-              <FiPrinter className="w-4 h-4" /> Print / Save as PDF
+              <FiPrinter className="w-4 h-4 shrink-0" /> Print / Save as PDF
             </button>
           </div>
         )}

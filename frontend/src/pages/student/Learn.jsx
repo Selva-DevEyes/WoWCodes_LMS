@@ -114,7 +114,7 @@ const Learn = () => {
   })
 
   return (
-    <div className="space-y-8 max-w-7xl mx-auto font-sans pb-16 px-2 sm:px-4">
+    <div className="space-y-6 max-w-7xl mx-auto font-sans pb-3 sm:pb-8 px-2 sm:px-4 text-left">
       {/* Hero Banner Header - Fully Responsive Mobile Stack */}
       <div className="relative overflow-hidden bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 border border-indigo-500/30 rounded-3xl p-6 sm:p-10 shadow-2xl text-white">
         <div className="absolute -right-24 -top-24 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none" />
@@ -224,30 +224,30 @@ const Learn = () => {
         </div>
 
         {/* Real Topic Cards */}
-        <div className="space-y-3.5">
+        <div className="space-y-3">
           {activeTopics.map((topic, tIdx) => (
             <Link
               key={topic.id}
               to={`/learn/topic/${topic.id}`}
-              className="p-4 sm:p-5 rounded-2xl bg-slate-950 border border-slate-800 hover:border-indigo-500/60 transition-all duration-200 flex flex-col sm:flex-row sm:items-center justify-between gap-4 group hover:shadow-lg"
+              className="p-4 sm:p-5 rounded-2xl bg-slate-950 border border-slate-800 hover:border-indigo-500/60 transition-all duration-200 flex flex-col md:flex-row md:items-center justify-between gap-3 sm:gap-4 group hover:shadow-lg text-left"
             >
-              <div className="flex items-start sm:items-center gap-4">
-                <div className="w-10 h-10 rounded-xl bg-indigo-600/20 border border-indigo-500/30 text-indigo-400 flex items-center justify-center font-mono font-black text-xs shrink-0 mt-0.5 sm:mt-0">
+              <div className="flex items-start gap-3.5 min-w-0 text-left">
+                <div className="w-10 h-10 rounded-xl bg-indigo-600/20 border border-indigo-500/30 text-indigo-400 flex items-center justify-center font-mono font-black text-xs shrink-0 mt-0.5">
                   {tIdx + 1}
                 </div>
-                <div>
+                <div className="min-w-0 text-left">
                   <h3 className="text-sm font-black text-white group-hover:text-indigo-300 transition">
                     {topic.title}
                   </h3>
-                  <p className="text-xs text-slate-300 mt-0.5 line-clamp-1">{topic.description}</p>
+                  <p className="text-xs text-slate-300 mt-0.5 line-clamp-2 leading-relaxed">{topic.description}</p>
                 </div>
               </div>
 
-              <div className="flex items-center justify-between sm:justify-end gap-3 w-full sm:w-auto pt-2 sm:pt-0 border-t sm:border-t-0 border-slate-800/60">
-                <span className="text-[11px] text-slate-300 font-mono bg-slate-900 px-3 py-1 rounded-full border border-slate-800 flex items-center gap-1 font-semibold">
-                  <FiStar className="text-amber-400 w-3 h-3" /> 10-Q Employer Quiz
+              <div className="flex items-center justify-between md:justify-end gap-2.5 w-full md:w-fit shrink-0 pt-2.5 md:pt-0 border-t md:border-t-0 border-slate-800/60 self-start md:self-auto">
+                <span className="text-[11px] text-slate-300 font-mono bg-slate-900 px-3 py-1 rounded-full border border-slate-800 flex items-center gap-1.5 font-semibold whitespace-nowrap shrink-0 w-fit">
+                  <FiStar className="text-amber-400 w-3 h-3 shrink-0" /> 10-Q Employer Quiz
                 </span>
-                <div className="p-2 rounded-xl bg-indigo-600/20 text-indigo-300 group-hover:bg-indigo-600 group-hover:text-white transition">
+                <div className="p-2 rounded-xl bg-indigo-600/20 text-indigo-300 group-hover:bg-indigo-600 group-hover:text-white transition shrink-0">
                   <FiChevronRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
                 </div>
               </div>

@@ -133,24 +133,24 @@ const CourseDetail = () => {
   })
 
   return (
-    <div className="space-y-6 max-w-7xl mx-auto font-sans pb-16 px-2 sm:px-4">
-      <Link to="/learn" className="inline-flex items-center gap-2 text-slate-400 hover:text-indigo-400 transition font-bold text-xs sm:text-sm">
-        <FiArrowLeft /> Back to Program Overview
+    <div className="space-y-6 max-w-7xl mx-auto font-sans pb-3 sm:pb-8 px-2 sm:px-4 text-left">
+      <Link to="/learn" className="inline-flex items-center gap-2 text-slate-400 hover:text-indigo-400 transition font-bold text-xs sm:text-sm w-fit">
+        <FiArrowLeft className="shrink-0" /> Back to Program Overview
       </Link>
 
       {/* Course Header Banner */}
-      <div className="bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-8 shadow-xl text-white">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-          <div className="space-y-2">
+      <div className="bg-slate-900 border border-slate-800 rounded-3xl p-5 sm:p-8 shadow-xl text-white">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 text-left">
+          <div className="space-y-2 text-left">
             <div className="flex flex-wrap items-center gap-2">
-              <span className="text-xs px-2.5 py-0.5 rounded-full bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 uppercase font-semibold font-mono whitespace-nowrap shrink-0">
+              <span className="text-xs px-2.5 py-0.5 rounded-full bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 uppercase font-semibold font-mono whitespace-nowrap shrink-0 w-fit">
                 Certificate Program
               </span>
             </div>
-            <h1 className="text-2xl sm:text-3xl font-black text-white">Certificate of Software Development Engineering Program</h1>
+            <h1 className="text-xl sm:text-2xl lg:text-3xl font-black text-white">Certificate of Software Development Engineering Program</h1>
             <p className="text-slate-300 text-xs sm:text-sm max-w-3xl leading-relaxed">{course.description}</p>
           </div>
-          <div className="bg-slate-950 p-4 rounded-2xl border border-slate-800 text-center shrink-0 font-mono self-start sm:self-auto w-full sm:w-auto">
+          <div className="bg-slate-950 p-4 rounded-2xl border border-slate-800 text-center shrink-0 font-mono self-start md:self-auto w-full md:w-auto">
             <p className="text-xs text-slate-400">Total Program Topics</p>
             <p className="text-2xl font-black text-indigo-400">{topics.length} Topics</p>
           </div>

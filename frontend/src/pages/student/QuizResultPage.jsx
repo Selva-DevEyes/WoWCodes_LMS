@@ -49,7 +49,7 @@ const QuizResultPage = () => {
   const passed = result.passed === 1
 
   return (
-    <div className="max-w-3xl mx-auto space-y-6 font-sans pb-16">
+    <div className="max-w-3xl mx-auto space-y-6 font-sans pb-3 sm:pb-8 text-left">
       {/* Result Hero Card */}
       <div
         className={`relative overflow-hidden border rounded-3xl p-6 sm:p-10 shadow-2xl text-center flex flex-col items-center justify-center ${
