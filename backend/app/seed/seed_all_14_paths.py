@@ -1,4 +1,4 @@
-"""Comprehensive curriculum seeder for WoWCodes LMS."""
+import random
 from sqlalchemy import text
 from app.database.session import SessionLocal
 from app.models.role import Role
@@ -321,7 +321,9 @@ def seed_database(force: bool = False):
                             )
                             db.add(question)
                             db.flush()
-                            for opt_idx, (text, correct) in enumerate(q["options"]):
+                            shuffled_opts = list(q["options"])
+                            random.shuffle(shuffled_opts)
+                            for opt_idx, (text, correct) in enumerate(shuffled_opts):
                                 db.add(Option(
                                     question_id=question.id,
                                     text=text,
@@ -372,7 +374,9 @@ def seed_database(force: bool = False):
                     )
                     db.add(question)
                     db.flush()
-                    for opt_idx, (text, correct) in enumerate(q["options"]):
+                    shuffled_opts = list(q["options"])
+                    random.shuffle(shuffled_opts)
+                    for opt_idx, (text, correct) in enumerate(shuffled_opts):
                         db.add(Option(
                             question_id=question.id,
                             text=text,
@@ -430,7 +434,9 @@ def seed_database(force: bool = False):
                         )
                         db.add(question)
                         db.flush()
-                        for opt_idx, (text, correct) in enumerate(q["options"]):
+                        shuffled_opts = list(q["options"])
+                        random.shuffle(shuffled_opts)
+                        for opt_idx, (text, correct) in enumerate(shuffled_opts):
                             db.add(Option(
                                 question_id=question.id,
                                 text=text,

@@ -29,7 +29,18 @@ const QuizPage = () => {
     apiClient
       .get(ENDPOINTS.quiz(quizId))
       .then((res) => {
-        setQuiz(res.data)
+        const quizData = res.data
+        if (quizData && quizData.questions) {
+          quizData.questions = quizData.questions.map((q) => {
+            const shuffled = [...(q.options || [])]
+            for (let i = shuffled.length - 1; i > 0; i--) {
+              const j = Math.floor(Math.random() * (i + 1))
+              ;[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]
+            }
+            return { ...q, options: shuffled }
+          })
+        }
+        setQuiz(quizData)
         setLoading(false)
       })
       .catch((err) => {
