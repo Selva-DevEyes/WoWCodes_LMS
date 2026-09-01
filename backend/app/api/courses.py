@@ -12,6 +12,15 @@ from app.models.user import User
 router = APIRouter(prefix="/courses", tags=["Courses"])
 
 
+@router.get("/seed-now")
+@router.post("/seed-now")
+def seed_database_endpoint():
+    """Seed all 14 learning paths, topics, and quizzes into the database."""
+    from app.seed.seed_all_14_paths import seed_database
+    seed_database()
+    return {"message": "Curriculum database seeded successfully with all 14 courses, modules, topics, and quizzes!"}
+
+
 @router.get("", response_model=list[CourseResponse])
 def list_courses(db: Session = Depends(get_db)):
     """List published courses."""

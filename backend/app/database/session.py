@@ -67,11 +67,8 @@ def init_db() -> None:
         from app.models.course import Course
         if db.query(Course).count() == 0:
             print("Fresh database detected! Running initial curriculum seeder...")
-            try:
-                from scratch.seed_all_14_paths import seed_curriculum
-                seed_curriculum()
-            except ImportError:
-                pass
+            from app.seed.seed_all_14_paths import seed_database
+            seed_database()
     except Exception as e:
         print(f"Auto-seed check note: {e}")
     finally:
