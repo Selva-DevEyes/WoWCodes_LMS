@@ -181,7 +181,7 @@ const QuizPage = () => {
       </div>
 
       {/* Interactive Question Step Numbers Indicator */}
-      <div className="bg-slate-950 border border-slate-800 rounded-2xl p-3 shadow-md flex items-center justify-between gap-2 overflow-x-auto">
+      <div className="bg-slate-950 border border-slate-800 rounded-2xl p-3 pb-3.5 shadow-md flex items-center justify-between gap-2 overflow-x-auto custom-scrollbar">
         {quiz.questions.map((q, idx) => {
           const userAns = answers[q.id]
           const qCorrect = q.options.find((o) => o.is_correct)
