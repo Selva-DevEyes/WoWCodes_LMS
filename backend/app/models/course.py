@@ -17,7 +17,7 @@ class Course(Base, TimestampMixin):
     category: Mapped[str] = mapped_column(String(100), nullable=False, index=True)
     level: Mapped[str] = mapped_column(String(50), default="beginner", nullable=False)
     icon: Mapped[str] = mapped_column(String(100), nullable=True)
-    color: Mapped[str] = mapped_column(String(20), nullable=True)
+    color: Mapped[str] = mapped_column(String(100), nullable=True)
     instructor_id: Mapped[int] = mapped_column(ForeignKey("users.id"), nullable=True)
     is_published: Mapped[bool] = mapped_column(Boolean, default=False, nullable=False)
     order: Mapped[int] = mapped_column(Integer, default=0, nullable=False)

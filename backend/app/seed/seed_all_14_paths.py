@@ -1,5 +1,5 @@
 """Comprehensive curriculum seeder for WoWCodes LMS."""
-from app.database.session import SessionLocal, init_db
+from app.database.session import SessionLocal
 from app.models.role import Role
 from app.models.user import User
 from app.models.course import Course
@@ -141,7 +141,7 @@ def generate_50_final_exam_questions():
     return questions
 
 
-def seed_database():
+def seed_database(force: bool = False):
     """Seed all 14 courses, modules, topics, lessons, quizzes, and default roles/admin."""
     db = SessionLocal()
     try:
@@ -170,9 +170,20 @@ def seed_database():
             db.commit()
 
         # 3. Check if courses already seeded
-        if db.query(Course).count() > 0:
-            print("Courses already exist in database. Skipping seed.")
-            return
+        course_count = db.query(Course).count()
+        if course_count > 0 and not force:
+            print(f"Courses already exist in database ({course_count} courses). Skipping seed.")
+            return {"status": "already_seeded", "course_count": course_count}
+
+        if force:
+            print("Force re-seeding requested: clearing old curriculum rows...")
+            db.query(Option).delete()
+            db.query(Question).delete()
+            db.query(Quiz).delete()
+            db.query(Lesson).delete()
+            db.query(Topic).delete()
+            db.query(Course).delete()
+            db.commit()
 
         print("Starting full curriculum seeding...")
 
@@ -265,17 +276,15 @@ def seed_database():
                             slug=t_slug,
                             description=t_desc,
                             order=t_idx,
-                            is_published=True,
                         )
                         db.add(topic)
                         db.flush()
 
                         lesson = Lesson(
+                            course_id=course.id,
                             topic_id=topic.id,
                             title=f"{t_title} Masterclass & Enterprise Guide",
-                            slug=f"{t_slug}-guide",
                             content=f"# {t_title}\n\nComprehensive production guide for {t_title}.\n\n### Core Engineering Competency\nMaster the mental models, performance considerations, and employer expectations for {t_title}.\n\n```javascript\n// Production Pattern\nconsole.log('Mastering {t_title} at enterprise scale');\n```",
-                            duration_minutes=30,
                             order=1,
                             is_published=True,
                         )
@@ -319,17 +328,15 @@ def seed_database():
                     slug="certification-exam",
                     description="Official 50-Question Final Certification Examination evaluating all 6 modules. Score 70%+ to claim your verified SDE Certificate.",
                     order=99,
-                    is_published=True,
                 )
                 db.add(final_topic)
                 db.flush()
 
                 final_lesson = Lesson(
+                    course_id=course.id,
                     topic_id=final_topic.id,
                     title="Examination Guidelines & Evaluation Rubric",
-                    slug="exam-guidelines",
                     content="# Final Software Engineering Certification Exam\n\n- **Total Questions**: 50\n- **Passing Score**: 70% (35/50 correct)\n- **Time Limit**: 90 Minutes\n- **Reward**: Official Verifiable WoWCodes SDE Certificate",
-                    duration_minutes=10,
                     order=1,
                     is_published=True,
                 )
@@ -379,17 +386,15 @@ def seed_database():
                         slug=t_slug,
                         description=t_desc,
                         order=t_idx,
-                        is_published=True,
                     )
                     db.add(topic)
                     db.flush()
 
                     lesson = Lesson(
+                        course_id=course.id,
                         topic_id=topic.id,
                         title=f"{t_title} Masterclass",
-                        slug=f"{t_slug}-masterclass",
                         content=f"# {t_title}\n\nComprehensive guide to mastering {t_title}.\n\n```javascript\n// Production Code Example\nconsole.log('Welcome to {t_title}');\n```",
-                        duration_minutes=25,
                         order=1,
                         is_published=True,
                     )
@@ -427,6 +432,7 @@ def seed_database():
 
         db.commit()
         print("Database seeding completed successfully! All 14 learning paths and quizzes are active.")
+        return {"status": "success", "course_count": len(courses_data)}
     except Exception as e:
         db.rollback()
         print(f"Error seeding database: {e}")

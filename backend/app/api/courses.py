@@ -14,11 +14,23 @@ router = APIRouter(prefix="/courses", tags=["Courses"])
 
 @router.get("/seed-now")
 @router.post("/seed-now")
-def seed_database_endpoint():
+def seed_database_endpoint(force: bool = False):
     """Seed all 14 learning paths, topics, and quizzes into the database."""
-    from app.seed.seed_all_14_paths import seed_database
-    seed_database()
-    return {"message": "Curriculum database seeded successfully with all 14 courses, modules, topics, and quizzes!"}
+    try:
+        from app.seed.seed_all_14_paths import seed_database
+        result = seed_database(force=force)
+        return {
+            "success": True,
+            "message": "Curriculum database seeded successfully with all 14 courses, modules, topics, and quizzes!",
+            "details": result,
+        }
+    except Exception as e:
+        import traceback
+        return {
+            "success": False,
+            "error": str(e),
+            "traceback": traceback.format_exc(),
+        }
 
 
 @router.get("", response_model=list[CourseResponse])
