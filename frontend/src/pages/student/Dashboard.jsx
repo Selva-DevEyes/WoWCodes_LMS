@@ -89,11 +89,11 @@ const Dashboard = () => {
         <div className="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-6">
           <div className="space-y-3">
             <div className="flex flex-wrap items-center gap-2">
-              <span className="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 backdrop-blur-md">
-                <FiZap className="text-yellow-400 animate-pulse" /> SDE + Applied AI Track
+              <span className="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 backdrop-blur-md whitespace-nowrap shrink-0">
+                <FiZap className="text-yellow-400 animate-pulse shrink-0" /> SDE + Applied AI Track
               </span>
-              <span className="inline-flex items-center gap-1 text-xs px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 font-medium border border-emerald-500/30">
-                <FiShield className="w-3 h-3" /> WoWCodesCertified Curriculum
+              <span className="inline-flex items-center gap-1 text-xs px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 font-medium border border-emerald-500/30 whitespace-nowrap shrink-0">
+                <FiShield className="w-3 h-3 shrink-0" /> WoWCodes Certified Curriculum
               </span>
             </div>
             <h1 className="text-2xl sm:text-3xl lg:text-4xl font-black tracking-tight text-white">

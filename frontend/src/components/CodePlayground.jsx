@@ -161,32 +161,36 @@ export default function CodePlayground({ initialCode, initialLanguage = 'javascr
 
   return (
     <div className="bg-slate-950 border border-slate-800 rounded-3xl shadow-2xl overflow-hidden font-sans">
-      {/* Header Toolbar */}
-      <div className="px-5 py-4 bg-slate-900 border-b border-slate-800 flex flex-wrap items-center justify-between gap-3">
-        <div className="flex items-center gap-3">
-          <div className="p-2.5 bg-indigo-600/20 text-indigo-400 rounded-xl border border-indigo-500/30">
+      {/* Header Toolbar - Fully Responsive 2-Row on Mobile */}
+      <div className="px-4 sm:px-6 py-4 bg-slate-900 border-b border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4">
+        <div className="flex items-start sm:items-center gap-3">
+          <div className="p-2.5 bg-indigo-600/20 text-indigo-400 rounded-xl border border-indigo-500/30 shrink-0 mt-0.5 sm:mt-0">
             <FiCode className="w-5 h-5" />
           </div>
           <div>
-            <h3 className="font-extrabold text-white flex items-center gap-2 text-base">
-              Interactive Code Sandbox
-              <span className="text-[11px] font-mono font-bold px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+            <div className="flex flex-wrap items-center gap-2">
+              <h3 className="font-extrabold text-white text-base tracking-tight">
+                Interactive Code Sandbox
+              </h3>
+              <span className="text-[11px] font-mono font-bold px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 whitespace-nowrap shrink-0">
                 Live Execution
               </span>
-            </h3>
-            <p className="text-xs text-slate-400">Run code algorithms, test snippets, and inspect real-time outputs</p>
+            </div>
+            <p className="text-xs text-slate-400 mt-0.5 leading-relaxed">
+              Run code algorithms, test snippets, and inspect real-time outputs
+            </p>
           </div>
         </div>
 
         {/* Preset Selector */}
-        <div className="flex items-center gap-2">
-          <label className="text-xs text-slate-300 font-mono font-semibold flex items-center gap-1">
-            <FiZap className="text-amber-400" /> Presets:
+        <div className="flex items-center gap-2 self-start sm:self-auto shrink-0 pt-1 sm:pt-0">
+          <label className="text-xs text-slate-300 font-mono font-semibold flex items-center gap-1 shrink-0">
+            <FiZap className="text-amber-400 shrink-0" /> Presets:
           </label>
           <select
             value={activePreset}
             onChange={(e) => handleSelectPreset(e.target.value)}
-            className="bg-slate-950 border border-slate-800 text-xs text-slate-100 font-mono rounded-xl px-3 py-2 focus:ring-2 focus:ring-indigo-500 focus:outline-none"
+            className="bg-slate-950 border border-slate-800 text-xs text-slate-100 font-mono rounded-xl px-3 py-1.5 focus:ring-2 focus:ring-indigo-500 focus:outline-none"
           >
             {Object.entries(PRESET_SNIPPETS).map(([key, val]) => (
               <option key={key} value={key}>{val.name}</option>

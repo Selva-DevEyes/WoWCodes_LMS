@@ -114,8 +114,8 @@ const TopicDetail = () => {
       <div className="card border border-slate-200 dark:border-slate-800 bg-slate-900 text-white p-6 sm:p-8 rounded-3xl shadow-xl">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div>
-            <div className="flex items-center gap-2 mb-2">
-              <span className="text-xs px-2.5 py-0.5 rounded-full bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 uppercase font-semibold font-mono">
+            <div className="flex flex-wrap items-center gap-2 mb-2">
+              <span className="text-xs px-2.5 py-0.5 rounded-full bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 uppercase font-semibold font-mono whitespace-nowrap shrink-0">
                 {isFinalExamTopic ? 'Certification Capstone' : 'Topic Module'}
               </span>
             </div>

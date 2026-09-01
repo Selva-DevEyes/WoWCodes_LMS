@@ -142,9 +142,11 @@ const CourseDetail = () => {
       <div className="bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-8 shadow-xl text-white">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div className="space-y-2">
-            <span className="text-xs px-2.5 py-0.5 rounded-full bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 uppercase font-semibold font-mono">
-              Certificate Program
-            </span>
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="text-xs px-2.5 py-0.5 rounded-full bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 uppercase font-semibold font-mono whitespace-nowrap shrink-0">
+                Certificate Program
+              </span>
+            </div>
             <h1 className="text-2xl sm:text-3xl font-black text-white">Certificate of Software Development Engineering Program</h1>
             <p className="text-slate-300 text-xs sm:text-sm max-w-3xl leading-relaxed">{course.description}</p>
           </div>

@@ -121,11 +121,11 @@ const Learn = () => {
         <div className="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-6">
           <div className="space-y-3 max-w-3xl">
             <div className="flex flex-wrap items-center gap-2">
-              <span className="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 font-mono">
-                <FiZap className="text-yellow-400 animate-pulse" /> Flagship Track
+              <span className="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 font-mono whitespace-nowrap shrink-0">
+                <FiZap className="text-yellow-400 animate-pulse shrink-0" /> Flagship Track
               </span>
-              <span className="inline-flex items-center gap-1 text-xs px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 font-semibold border border-emerald-500/30 font-mono">
-                <FiShield /> 100 Marks Capstone
+              <span className="inline-flex items-center gap-1 text-xs px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 font-semibold border border-emerald-500/30 font-mono whitespace-nowrap shrink-0">
+                <FiShield className="shrink-0" /> 100 Marks Capstone
               </span>
             </div>
             <h1 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white tracking-tight leading-tight">
@@ -209,8 +209,8 @@ const Learn = () => {
       <div className="bg-slate-900 border border-slate-800 rounded-3xl p-5 sm:p-8 shadow-xl space-y-6">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-slate-800">
           <div>
-            <div className="flex items-center gap-2">
-              <span className="text-[11px] font-mono font-black px-2.5 py-0.5 rounded-full bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="text-[11px] font-mono font-black px-2.5 py-0.5 rounded-full bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 whitespace-nowrap shrink-0">
                 {currentTab.num} ACTIVE
               </span>
             </div>

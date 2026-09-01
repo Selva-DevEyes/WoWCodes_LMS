@@ -8,9 +8,11 @@ export default function PlaygroundPage() {
       <div className="bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 border border-indigo-500/30 rounded-3xl p-6 sm:p-8 shadow-xl text-white">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
           <div className="space-y-2">
-            <span className="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">
-              <FiZap className="text-amber-400" /> Interactive Execution Engine
-            </span>
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 whitespace-nowrap shrink-0">
+                <FiZap className="text-amber-400 shrink-0" /> Interactive Execution Engine
+              </span>
+            </div>
             <h1 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">
               Interactive Code Sandbox
             </h1>
@@ -19,9 +21,9 @@ export default function PlaygroundPage() {
             </p>
           </div>
 
-          <div className="flex items-center gap-3">
-            <div className="flex items-center gap-2 text-xs font-mono text-slate-300 bg-slate-950 px-3.5 py-2 rounded-xl border border-slate-800">
-              <FiCpu className="text-emerald-400" /> V8 Sandbox Environment
+          <div className="flex items-center gap-3 self-start md:self-auto shrink-0">
+            <div className="flex items-center gap-2 text-xs font-mono text-slate-300 bg-slate-950 px-3.5 py-2 rounded-xl border border-slate-800 whitespace-nowrap shrink-0">
+              <FiCpu className="text-emerald-400 shrink-0" /> V8 Sandbox Environment
             </div>
           </div>
         </div>
